@@ -3,71 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Mi-Sazón</title>
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="container">
-	<div class="row">
-<!-- Mixins-->
-<!-- Pen Title-->
-<div class="pen-title">
-  <h1>Material Login Form</h1>
-</div>
-<div class="container">
-  <div class="card col-sm-6"></div>
-  <div class="card col-sm-6">
-    <h1 class="title">Login</h1>
-    <form>
-      <div class="input-container">
-        <input type="text" id="Username" required="required"/>
-        <label for="Username">Username</label>
-        <div class="bar"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <form class="form-login">
+            <figure>
+              <img src="./images/logo-mi-sazon.png" alt="logo-mi-sazon" width="100%"/>
+            </figure>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" type="text" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" id="password" type="password" />
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" name="rememberme" id="rememberme" />
+              <label for="rememberme" class="form-check-label">Remember </label>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-color">INICIAR SESIÓN</button>
+          </form>
+        </div>
       </div>
-      <div class="input-container">
-        <input type="password" id="Password" required="required"/>
-        <label for="Password">Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button><span>Go</span></button>
-      </div>
-      <div class="footer"><a href="#">Forgot your password?</a></div>
-    </form>
-  </div>
-  <div class="card alt">
-    <div class="toggle"></div>
-    <h1 class="title">Register
-      <div class="close"></div>
-    </h1>
-    <form>
-      <div class="input-container">
-        <input type="text" id="Username" required="required"/>
-        <label for="Username">Username</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="Password" required="required"/>
-        <label for="Password">Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="Repeat Password" required="required"/>
-        <label for="Repeat Password">Repeat Password</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button><span>Next</span></button>
-      </div>
-    </form>
-  </div>
-</div>
-<!-- Portfolio-->
-<a id="portfolio" href="http://pkshopy.com/farooqshad/" title="View my portfolio!"><i class="fa fa-link"></i></a>
-	</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-<script src="js/index.js" ></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/index.js" ></script>
   </body>
 </html>

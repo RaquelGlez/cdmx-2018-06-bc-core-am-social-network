@@ -70,6 +70,28 @@ Debe verse bien en dispositivos de pantallas grandes
 sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica
 al final).
 
+### Objetivos
+Diseñar y construir una red social en la cual contega un log-in, con el que se
+pueda accesar a la plataforma, que sea fácil de manipular, amigable al usuario,
+además de que se pueda utilizar en distintos dispositivos: moviles, tablets y
+desktops.
+
+### Proto-Usuario:
+Raquel es una mujer de 25 años que vive con su familia (esposo e hijo) en la
+ciudad de México. Ella trabaja en una empresa de servicios en un horario de
+9 a 6 pm y percibe un ingreso promedio (8 000). Una de sus necesidades es
+procurar para su familia una alimentación saludable y equilibrada dentro de sus
+posibilidades económicas. Raquel gusta de buscar recetas de comida en internet
+que parecen fáciles y tienen pocos ingredientes. Sin embargo, los resultados de
+su búsqueda siempre concluyen  en recetarios online de comida que no permiten
+una retroalimentación con la comunidad, de tal forma que se puedan intercambiar
+versiones. Por tanto las redes sociales enfocadas al intercambio de recetas
+son muy escasas en el mercado, y se espera con la implementación de esta, crear
+un espacio, en donde la comunidad en general pueda ser capaz de acceder a
+recetas locales, que no requieran tanto tiempo de preparación o una gran
+inversión en los ingredientes.
+
+
 ### Tests
 
 Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
