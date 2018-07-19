@@ -1,6 +1,5 @@
-// login con google
+// funcion para iniciar sesioon con Google
 let provider = new firebase.auth.GoogleAuthProvider();
-// sintaxis de jquery $('') se adiere a las etiquetas de html (#id)
 $('#loginGoogle').click(function() {
   firebase.auth()
     .signInWithPopup(provider)
@@ -9,19 +8,20 @@ $('#loginGoogle').click(function() {
       $('#loginGoogle').hide();
     });
 });
-
+//  variables de jQuery
 let $email = $('#email');
 let $password = $('#password');
 let $register = $('#register');
 let $logout = $('#logout');
 let $login = $('#login');
 
+// funcion para el registo de usuarios nuevos
 $register.on('click', function() {
   const correo = $email.val();
   const password = $password.val();
   const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
     .catch(function(error) {
-      // Handle Errors here.
+      // Mensaje en consola si existe error de registro
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
@@ -29,16 +29,16 @@ $register.on('click', function() {
     });
 });
 
+// funcion para iniciar sesion con correo y contrasena ya registrados
 $login.on('click', function() {
   const email = $email.val();
   const password = $password.val();
   const inicio = firebase.auth().signInWithEmailAndPassword(email, password)
     .catch(function(error) {
-      // Handle Errors here.
+      // Mensaje en consola si existe error de inicio de sesion
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
-      // ...
     });
 });
