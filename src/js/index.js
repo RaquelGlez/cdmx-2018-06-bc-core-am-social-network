@@ -39,10 +39,10 @@ const register = document.getElementById('register');
 const logout = document.getElementById('logout');
 const login = document.getElementById('login');
 
-login.addEventListener('click', event => {
-  const correo = email.value;
-  const contraseña = password.value;
-  const auth = firebase.auth().auth.signInWhithEmailAndPassword(correo, contraseña)
-    .catch(function(error) {
-    });
-});
+// login.addEventListener('click', event => {
+//   const correo = email.value;
+//   const contraseña = password.value;
+//   const auth = firebase.auth().auth.signInWhithEmailAndPassword(correo, contraseña)
+//     .catch(function(error) {
+//     });
+// });
