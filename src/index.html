@@ -16,21 +16,44 @@
             </figure>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" id="email" type="text" />
+                <input id="email" placeholder="Ingresa tu email"class="form-control"  type="text" />
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-control" id="password" type="password" />
+                <input id="password" placeholder="Ingresa tu contraseña"class="form-control"  type="password" />
             </div>
             <div class="form-check form-check-inline">
               <input type="checkbox" class="form-check-input" name="rememberme" id="rememberme" />
               <label for="rememberme" class="form-check-label">Remember </label>
             </div>
-            <button type="button" class="btn btn-primary btn-lg btn-color">INICIAR SESIÓN</button>
+            <button id="register" type="button" class="btn btn-primary btn-lg btn-color">REGISTRARME</button>
+            <button id="logout" type="button" class="btn btn-primary btn-lg btn-color">CERRAR SESIÓN</button>
+            <button id="login" type="button" class="btn btn-primary btn-lg btn-color">INICIAR SESIÓN</button>
+            <button id="loginGoogle" type="button" class="btn btn-primary btn-lg btn-color">INICIAR SESIÓN CON GOOGLE</button>
           </form>
         </div>
       </div>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+  let config = {
+    apiKey: "AIzaSyBURBUsmSksVn1nbBWquIWIamJlXlXTaCQ",
+    authDomain: "diy-de-firebase.firebaseapp.com",
+    databaseURL: "https://diy-de-firebase.firebaseio.com",
+    projectId: "diy-de-firebase",
+    storageBucket: "diy-de-firebase.appspot.com",
+    messagingSenderId: "184356921265"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script  src = " https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
+  <script  src = " https://www.gstatic.com/firebasejs/ui/3.1.1/firebase-ui-auth__es.js "></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="js/index.js" ></script>
