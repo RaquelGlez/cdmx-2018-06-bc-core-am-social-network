@@ -1,13 +1,3 @@
-$(document).ready(function() {
-  $('.toggle').on('click', function() {
-    $('.container').stop().addClass('active');
-  });
-
-  $('.close').on('click', function() {
-    $('.container').stop().removeClass('active');
-  });
-});
-
 // login con google
 let provider = new firebase.auth.GoogleAuthProvider();
 // sintaxis de jquery $('') se adiere a las etiquetas de html (#id)
@@ -20,29 +10,35 @@ $('#loginGoogle').click(function() {
     });
 });
 
-// let $email = $('#email');
-// let $password = $('#password');
-// let $register = $('#register');
-// let $logout = $('#logout');
-// let $login = $('#login');
-//
-// $login.on('click', function() {
-//   const email = $email.val();
-//   const password = $password.val();
-//   const authentication = firebase.auth();
-//   const promise = auth.signInWhithEmailAndPassword(email, password);
-// });
+let $email = $('#email');
+let $password = $('#password');
+let $register = $('#register');
+let $logout = $('#logout');
+let $login = $('#login');
 
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const register = document.getElementById('register');
-const logout = document.getElementById('logout');
-const login = document.getElementById('login');
+$register.on('click', function() {
+  const correo = $email.val();
+  const password = $password.val();
+  const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
+    .catch(function(error) {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+});
 
-// login.addEventListener('click', event => {
-//   const correo = email.value;
-//   const contraseña = password.value;
-//   const auth = firebase.auth().auth.signInWhithEmailAndPassword(correo, contraseña)
-//     .catch(function(error) {
-//     });
-// });
+$login.on('click', function() {
+  const email = $email.val();
+  const password = $password.val();
+  const inicio = firebase.auth().signInWithEmailAndPassword(email, password)
+    .catch(function(error) {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+      // ...
+    });
+});
