@@ -1,4 +1,6 @@
+
 // funcion para iniciar sesioon con Google
+
 let provider = new firebase.auth.GoogleAuthProvider();
 $('#loginGoogle').click(function() {
   firebase.auth()
@@ -29,6 +31,7 @@ $register.on('click', function() {
     });
 });
 
+
 // funcion para iniciar sesion con correo y contrasena ya registrados
 $login.on('click', function() {
   const email = $email.val();
@@ -42,3 +45,4 @@ $login.on('click', function() {
       console.log(errorMessage);
     });
 });
+
