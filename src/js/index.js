@@ -1,13 +1,28 @@
+
 // funcion para iniciar sesioon con Google
-let provider = new firebase.auth.GoogleAuthProvider();
+
+let providerg = new firebase.auth.GoogleAuthProvider();
 $('#loginGoogle').click(function() {
   firebase.auth()
-    .signInWithPopup(provider)
+    .signInWithPopup(providerg)
     .then(function(result) {
       console.log(result.user);
       $('#loginGoogle').hide();
     });
 });
+
+// funcion para iniciar sesion con facebook
+let providerf = new firebase.auth.FacebookAuthProvider();
+$('#loginFacebook').click(function() {
+  firebase.auth()
+    .signInWithPopup(providerf)
+    .then(function(result) {
+      console.log(result.user);
+      $('#loginFacebook').hide();
+    });
+});
+
+
 //  variables de jQuery
 let $email = $('#email');
 let $password = $('#password');
@@ -29,6 +44,7 @@ $register.on('click', function() {
       console.log(errorMessage);
     });
 });
+
 
 // funcion para iniciar sesion con correo y contrasena ya registrados
 $login.on('click', function() {
