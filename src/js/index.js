@@ -56,3 +56,15 @@ $login.on('click', function() {
       console.log(errorMessage);
     });
 });
+
+
+// Funcion para cerrar sesion
+$logout.on('click', function() {
+  firebase.auth().signOut()
+    .then(function functionName() {
+      console.log('saliendo...');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+});
