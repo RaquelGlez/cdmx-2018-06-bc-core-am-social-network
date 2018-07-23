@@ -32,7 +32,8 @@ let $login = $('#login');
 $register.on('click', function() {
   const correo = $email.val();
   const password = $password.val();
-  const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
+  const registro = firebase.auth()
+    .createUserWithEmailAndPassword(correo, password)
     .catch(function(error) {
     // Mensaje en consola si existe error de registro
       let errorCode = error.code;
@@ -47,7 +48,8 @@ $register.on('click', function() {
 $login.on('click', function() {
   const email = $email.val();
   const password = $password.val();
-  const inicio = firebase.auth().signInWithEmailAndPassword(email, password)
+  const inicio = firebase.auth()
+    .signInWithEmailAndPassword(email, password)
     .catch(function(error) {
     // Mensaje en consola si existe error de inicio de sesion
       let errorCode = error.code;
