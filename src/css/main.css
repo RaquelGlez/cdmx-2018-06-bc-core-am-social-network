@@ -2,12 +2,12 @@ body {
   background-image: url(../images/fondo.png);
   }
 .contenedor, #contenedor {
-  padding: 30px 60px;
-  margin-top: 1em;    
+  padding: 1em, 1em;
+  margin-top: 1em;   
 }
-#img {
-  width: 300px;
-  height: auto;
-  margin: auto;
-  display: block;
-}
+.pie {
+  font-size: 10px;
+  text-align: center;
+  bottom: 1em;
+  }
+
