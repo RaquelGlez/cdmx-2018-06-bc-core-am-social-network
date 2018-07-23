@@ -1,6 +1,4 @@
-
 // funcion para iniciar sesioon con Google
-
 let providerg = new firebase.auth.GoogleAuthProvider();
 $('#loginGoogle').click(function() {
   firebase.auth()
@@ -37,7 +35,7 @@ $register.on('click', function() {
   const registro = firebase.auth()
     .createUserWithEmailAndPassword(correo, password)
     .catch(function(error) {
-      // Mensaje en consola si existe error de registro
+    // Mensaje en consola si existe error de registro
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
@@ -53,10 +51,22 @@ $login.on('click', function() {
   const inicio = firebase.auth()
     .signInWithEmailAndPassword(email, password)
     .catch(function(error) {
-      // Mensaje en consola si existe error de inicio de sesion
+    // Mensaje en consola si existe error de inicio de sesion
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
+    });
+});
+
+
+// Funcion para cerrar sesion
+$logout.on('click', function() {
+  firebase.auth().signOut()
+    .then(function functionName() {
+      console.log('saliendo...');
+    })
+    .catch(function(error) {
+      console.log(error);
     });
 });
