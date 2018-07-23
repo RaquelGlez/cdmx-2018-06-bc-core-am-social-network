@@ -9,35 +9,30 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-      <main class="container">
-          <section class="row justify-content-center ">
-              <article class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4" id="img">
+      <main class="container-fluid">
+          <section class="row">
+              <article class="col" id="img">
                     <img src="images/mi-sazon.png" alt="Mi-Sazón">
               </article>
-            </section>
-              <section class="row justify-content-center">
-                    <article class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4">
-                            <form class="contenedor">
-                                <section class="row justify-content-center">
-                                    <button id="register" type="button" class="btn btn-warning btn-block">Registrarme</button>
-                                    <button id="loginGoogle" type="button" class="btn btn-danger btn-block">Iniciar sesión con Google</button>
-                                    <button id="loginFacebook" type="button" class="btn btn-primary btn-block">Iniciar sesión con Facebook</button>
-                                    <label for="email">Ingresa tu correo</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email...">
-                                </section>
-                                <section class="row justify-content-center">
-                                    <label for="password">Ingresa tu contraseña</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Contraseña...">
-                                    <button id="login" type="button" class="btn btn-success btn-block offset">Iniciar sesión</button>
-                               <!-- <button id="logout" type="button" class="btn btn-primary btn-lg btn-color">CERRAR SESIÓN</button>-->
-                                </section>                      
-                                
-                    </form>
-                        </article> 
-              </section>
-                           
-       </main>  
-       <footer class="pie">Copyright (c) <strong>Raque, Vicky y Briss</strong> 2018 Copyright, Holder All Rights Reserved.</footer>  
+              <article class="col">
+                  <form class="contenedor">
+                      <section class="form-group">
+                          <button id="register" type="button" class="btn btn-warning btn-block">Registrarme</button>
+                          <button id="loginGoogle" type="button" class="btn btn-danger btn-block">Iniciar sesión con Google</button>
+                          <button id="loginFacebook" type="button" class="btn btn-primary btn-block">Iniciar sesión con Facebook</button>
+                          <label for="email">Ingresa tu correo</label>
+                          <input type="email" class="form-control" id="email" placeholder="Email...">
+                      </section>
+                      <section class="form-group">
+                          <label for="password">Ingresa tu contraseña</label>
+                          <input type="password" class="form-control" id="password" placeholder="Contraseña...">
+                      </section>                      
+                      <button id="login" type="button" class="btn btn-success btn-block">Iniciar sesión</button>
+                     <!-- <button id="logout" type="button" class="btn btn-primary btn-lg btn-color">CERRAR SESIÓN</button>-->
+          </form>
+              </article>              
+         </section>
+       </main>    
   <script src ="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
