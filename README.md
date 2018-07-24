@@ -194,6 +194,10 @@ las recetas por internet, para tener un poco mas de idea sobre el terreno donde
 estamos paradas y que se puede ofrecer a personas normales, que viven inmersos
 en la rutina del día a día.
 
+# Aquí la liga de la encuesta realizada a los usuarios:
+
+[ Encuesta ](https://docs.google.com/forms/d/1QtJxC6FTiAEgu0vUFdwEPrbeYzB89d7BoPzQCruXHvI/edit)
+
 De los resultados obtenidos hasta el momento podríamos decir que:
     • Los usuarios buscan recetas por internet, pero no son usuarios de una red
     social específica

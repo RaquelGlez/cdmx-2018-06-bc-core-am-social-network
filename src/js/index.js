@@ -26,7 +26,6 @@ $('#loginFacebook').click(function() {
 });
 
 
-
 //  variables de jQuery
 let $name = $('name');
 let $apellido = $('last_name');
@@ -124,15 +123,6 @@ $logout.on('click', function() {
 
 // Funcion para guardar los datos del usuaio en Firebase
 const datosUsuario = (user) =>{
-  let usuario= {
-  uid:user.uid,  
-  nombre: user.displayName,
-  correo:user.email,
-  foto: user.photoURL
-  }
-  firebase.database().ref("Usuarios/" + user.uid)
-  .set(usuario)  
-}
   let usuario = {
     uid: user.uid,
     nombre: user.displayName,
@@ -142,3 +132,11 @@ const datosUsuario = (user) =>{
   firebase.database().ref('Usuarios/' + user.uid)
     .set(usuario);
 };
+let usuario = {
+  uid: user.uid,
+  nombre: user.displayName,
+  correo: user.email,
+  foto: user.photoURL
+};
+firebase.database().ref('Usuarios/' + user.uid)
+  .set(usuario);
