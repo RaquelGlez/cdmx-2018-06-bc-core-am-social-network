@@ -7,6 +7,7 @@ $('#loginGoogle').click(function() {
       console.log(result.user);
       $('#loginGoogle').hide();
     });
+  observador();
 });
 
 // funcion para iniciar sesion con facebook
@@ -18,10 +19,15 @@ $('#loginFacebook').click(function() {
       console.log(result.user);
       $('#loginFacebook').hide();
     });
+  observador();
 });
 
 
 //  variables de jQuery
+let $name = $('name');
+let $apellido = $('last_name');
+let $emailRegistro = $('email2');
+let $passwordRegistro = $('password2');
 let $email = $('#email');
 let $password = $('#password');
 let $register = $('#register');
@@ -30,8 +36,10 @@ let $login = $('#login');
 
 // funcion para el registo de usuarios nuevos
 $register.on('click', function() {
-  const correo = $email.val();
-  const password = $password.val();
+  const name = $name.val();
+  const apellido = $apellido.val();
+  const correo = $emailRegistro.val();
+  const password = $passwordRegistro.val();
   const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
     .catch(function(error) {
     // Mensaje en consola si existe error de registro
@@ -63,7 +71,6 @@ let observador = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log('existe usuario activo');
-      muro();
       // User is signed in.
       let displayName = user.displayName;
       let email = user.email;
@@ -73,6 +80,7 @@ let observador = () => {
       let uid = user.uid;
       let providerData = user.providerData;
       console.log(user);
+      muro();
     // ...
     } else {
       console.log('no existe usuario activo');
@@ -80,10 +88,9 @@ let observador = () => {
     }
   });
 };
-observador();
 
 let muro = () => {
-  location.assign('views/view1.html');
+  location.href = 'views/view1.html';
 };
 
 let $logout = $('#logout');
@@ -91,7 +98,7 @@ $logout.on('click', function() {
   firebase.auth().signOut()
     .then(function functionName() {
       console.log(' saliendo. ..');
-      location.assign('index.html');
+      location.href = 'index.html';
     })
     .catch(function(error) {
       console.log(error);
