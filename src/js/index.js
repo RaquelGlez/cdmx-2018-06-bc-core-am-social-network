@@ -1,3 +1,10 @@
+//  variables de jQuery
+let $email = $('#email');
+let $password = $('#password');
+let $register = $('#register');
+let $logout = $('#logout');
+let $login = $('#login');
+
 // funcion para iniciar sesioon con Google
 let providerg = new firebase.auth.GoogleAuthProvider();
 $('#loginGoogle').click(function() {
@@ -5,6 +12,7 @@ $('#loginGoogle').click(function() {
     .signInWithPopup(providerg)
     .then(function(result) {
       console.log(result.user);
+      datosUsuario(result.user);
       $('#loginGoogle').hide();
     });
 });
@@ -16,23 +24,17 @@ $('#loginFacebook').click(function() {
     .signInWithPopup(providerf)
     .then(function(result) {
       console.log(result.user);
+      datosUsuario(result.user);
       $('#loginFacebook').hide();
     });
 });
-
-
-//  variables de jQuery
-let $email = $('#email');
-let $password = $('#password');
-let $register = $('#register');
-let $logout = $('#logout');
-let $login = $('#login');
 
 // funcion para el registo de usuarios nuevos
 $register.on('click', function() {
   const correo = $email.val();
   const password = $password.val();
   const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
+  
     .catch(function(error) {
     // Mensaje en consola si existe error de registro
       let errorCode = error.code;
@@ -68,3 +70,15 @@ $logout.on('click', function() {
       console.log(error);
     });
 });
+
+// Funcion para guardar los datos del usuaio en Firebase
+const datosUsuario = (user) =>{
+  let usuario= {
+  uid:user.uid,  
+  nombre: user.displayName,
+  correo:user.email,
+  foto: user.photoURL
+  }
+  firebase.database().ref("Usuarios/" + user.uid)
+  .set(usuario)  
+}
