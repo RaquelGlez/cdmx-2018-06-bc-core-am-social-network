@@ -5,6 +5,7 @@ $('#loginGoogle').click(function() {
     .signInWithPopup(providerg)
     .then(function(result) {
       console.log(result.user);
+      datosUsuario(result.user);
       $('#loginGoogle').hide();
     });
 });
@@ -16,6 +17,7 @@ $('#loginFacebook').click(function() {
     .signInWithPopup(providerf)
     .then(function(result) {
       console.log(result.user);
+      datosUsuario(result.user);
       $('#loginFacebook').hide();
     });
 });
@@ -70,3 +72,16 @@ $logout.on('click', function() {
       console.log(error);
     });
 });
+
+// Funcion para guardar los datos del usuaio en Firebase
+ const datosUsuario = (user) =>{
+  let usuario= {
+  uid:user.uid,  
+  nombre: user.displayName,
+  correo:user.email,
+  foto: user.photoURL
+  }
+  firebase.database().ref("Usuarios/" + user.uid)
+  .set(usuario)  
+}
+ 
