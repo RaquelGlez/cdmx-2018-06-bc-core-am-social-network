@@ -34,7 +34,7 @@ $register.on('click', function() {
   const correo = $email.val();
   const password = $password.val();
   const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
-  
+
     .catch(function(error) {
     // Mensaje en consola si existe error de registro
       let errorCode = error.code;
@@ -73,12 +73,12 @@ $logout.on('click', function() {
 
 // Funcion para guardar los datos del usuaio en Firebase
 const datosUsuario = (user) =>{
-  let usuario= {
-  uid:user.uid,  
-  nombre: user.displayName,
-  correo:user.email,
-  foto: user.photoURL
-  }
-  firebase.database().ref("Usuarios/" + user.uid)
-  .set(usuario)  
-}
+  let usuario = {
+    uid: user.uid,
+    nombre: user.displayName,
+    correo: user.email,
+    foto: user.photoURL
+  };
+  firebase.database().ref('Usuarios/' + user.uid)
+    .set(usuario);
+};
