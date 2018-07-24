@@ -1,13 +1,50 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+
+@media (min-width: 768px) {
+  .contenedor {
+    width: 640px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+}
+
 body {
   background-image: url(../images/fondo.png);
-  }
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.form-button {
+  font-size: 2em;
+  color: white;
+}
+
+.form-label {
+  font-size: 1.5em;
+}
+
+.form-input {
+  font-size: 1.5em;
+}
+
 .contenedor, #contenedor {
   padding: 30px 60px;
-  margin-top: 1em;    
+  margin-top: 1em;
 }
 #img {
   width: 300px;
   height: auto;
   margin: auto;
   display: block;
+}
+
+.form-login {
+  background-color: white;
+  border-radius: 7px;
+}
+
+.form-logo {
+  position: relative;
+  width: 100%;
 }
