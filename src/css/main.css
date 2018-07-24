@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
 
 @media (min-width: 768px) {
   .contenedor {
@@ -12,7 +12,7 @@
 
 body {
   background-image: url(../images/fondo.png);
-  font-family: 'Fugaz One', cursive;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 .form-button {
