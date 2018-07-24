@@ -6,6 +6,10 @@ body {
   font-size: 1em;
 }
 
+.publication {
+  margin-top: 1em;
+}
+
 .navbar-style {
   background-color: #433c30;
   color: white;
@@ -24,4 +28,16 @@ nav div ul li a{
 nav a {
   display: block;
   margin: 0 auto !important;
+}
+
+.a-like-btn {
+  border-radius: 7px;
+  font-size: 1em;
+  padding: 0.6em;
+  border: 1px solid gray;
+}
+
+.like-btn {
+  color: red;
+  font-size: 1em;
 }
