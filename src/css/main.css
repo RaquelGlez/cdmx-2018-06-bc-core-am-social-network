@@ -9,7 +9,7 @@
     margin-top: 1em;
   }
   .form-label {
-    font-size: 1em;
+    font-size: 1.5em !important;
   }
   .form-button {
     font-size: 2em !important;
@@ -28,7 +28,7 @@ body {
 }
 
 .form-label {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .form-input {
