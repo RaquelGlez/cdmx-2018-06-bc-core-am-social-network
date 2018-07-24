@@ -46,7 +46,7 @@ $register.on('click', function() {
   const correo = $emailRegistro.val();
   const password = $passwordRegistro.val();
   const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
-  
+
     .catch(function(error) {
     // Mensaje en consola si existe error de registro
       let errorCode = error.code;
@@ -133,4 +133,12 @@ const datosUsuario = (user) =>{
   firebase.database().ref("Usuarios/" + user.uid)
   .set(usuario)  
 }
-
+  let usuario = {
+    uid: user.uid,
+    nombre: user.displayName,
+    correo: user.email,
+    foto: user.photoURL
+  };
+  firebase.database().ref('Usuarios/' + user.uid)
+    .set(usuario);
+};

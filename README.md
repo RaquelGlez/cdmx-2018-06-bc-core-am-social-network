@@ -219,16 +219,61 @@ al funcionamiento del producto solicitado, como se muestra a continuación:
 
 ![User Flow](./src/images/userflowMiSazon.png)
 
-# Como siguiente paso se realizo un sketch a lapiz y papel donde se plasma a grandes
-rasgos la interfaz con los elementos que ayudaran con la interacción de la misma,
-el cuál se mostro a nuestro cliente para su aprovación.
 
-![Sketch1](./src/images/sketch1.jpeg)
+# Como siguiente paso se realizo un sketch a lapiz y papel donde se plasma a grandes rasgos la interfaz con los elementos que ayudaran con la interacción de la misma, el cuál se mostro a nuestro cliente para su aprovación.
 
-# Una vez hechos los cambios pertinentes se paso a diseñar la interfaz con ayuda
-de una herramienta de diseño visual (Figma), como se puede apreciar a continuación:
+![Sketch Login Básico](./src/images/sketchloginbasico.jpeg)
 
-![Image Figma1](./src/images/login1.png)
+# Una vez hechos los cambios pertinentes se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual (Figma), como se puede apreciar a continuación:
+
+![Image Login Básico](./src/images/loginbasico.png)
+
+
+# Luego de testear nuestro login, los usuarios nos comentaron que nuestro logo no era agradable a la vista, por este motivo se procedió a modificar el logo a lapiz y papel, viendose de esta manera:
+
+![Sketch1](./src/images/sketch1.jpg)
+
+
+# Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual (Figma), como se puede apreciar a continuación:
+
+ ![Image Login 1](./src/images/login1.png)
+
+
+# El cliente pide que no solo pueda registrarse con usuario y contraseña, sino que también se pueda autenticar con Facebook o Google, por ende se elaboró como se vería el login con dichos requerimientos; primero a lapiz y papel:
+
+![Sketch Login 2](./src/images/sketchlogin2.jpg)
+
+
+
+![Sketch Login 3](./src/images/sketchlogin3.jpg)
+
+
+# Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual
+ (Figma), como se puede apreciar a continuación:
+
+ ![Image Login 2](./src/images/login2.png)
+
+
+ ![Image Login 3](./src/images/login3.png)
+
+El sketch a lapiz y papel, se realizó pensando en mobile-first, se implemento un menú hamburguesa del lado superior derecho con su respectivo logo, al darle “click” en el menú se desplegará una lista donde se podrá apreciar el perfil de usuario con una foto del mismo y un opción que nos permita cerrar la sesión (log out) al volver a darle “click” al menú de hamburguesa, este se ocultará dandole paso a la primera pantalla de nuestro muro se podra observar una caja que te pregunta de manera muy explicita ¿Qué tienes en tu refri? , donde se podrá públicar lo que desees saber acerca de recetas de cocina. Luego se verán publicaciones de aquellas personas a las que agregaste a tu red social la cual va a contener posting de recetas, o sugerencias de las mismas. Se podrá editar, compartir y hasta darle like (con un corazón) al post que sea de su agrado. Luego de observar como se vería nuestra interfaz en lapiz y papel , y plasmando todos los requerimientos que se necesitaban se procedió a realizar a color  las interfaces con ayuda de Figma. Se buscó que nuestra interfaz  fuera los mas amigable posible , fácil de usar pero sobre todo fácil de entender para el usuario.
+
+# A continuación se mostrarán los sketches a lapiz y papel:
+
+ ![Sketch Muro 1](./src/images/sketchmuro1.jpg)
+
+
+
+ ![Sketch Muro 2](./src/images/sketchmuro2.jpg)
+
+
+# Finalinzando con la utilización de la herramienta (Figma):
+
+![Image Muro 1](./src/images/mobilefirstscreen.png)
+
+
+![Image Muro 2](./src/images/mobilesecondscreen.png)
+
 
 ### Tests
 
