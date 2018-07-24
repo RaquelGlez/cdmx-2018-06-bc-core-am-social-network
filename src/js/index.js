@@ -1,9 +1,3 @@
-//  variables de jQuery
-let $email = $('#email');
-let $password = $('#password');
-let $register = $('#register');
-let $logout = $('#logout');
-let $login = $('#login');
 
 // funcion para iniciar sesioon con Google
 let providerg = new firebase.auth.GoogleAuthProvider();
@@ -15,6 +9,7 @@ $('#loginGoogle').click(function() {
       datosUsuario(result.user);
       $('#loginGoogle').hide();
     });
+  observador();
 });
 
 // funcion para iniciar sesion con facebook
@@ -27,12 +22,29 @@ $('#loginFacebook').click(function() {
       datosUsuario(result.user);
       $('#loginFacebook').hide();
     });
+  observador();
 });
+
+
+
+//  variables de jQuery
+let $name = $('name');
+let $apellido = $('last_name');
+let $emailRegistro = $('email2');
+let $passwordRegistro = $('password2');
+let $email = $('#email');
+let $password = $('#password');
+let $register = $('#register');
+// let $logout = $('#logout');
+let $login = $('#login');
+
 
 // funcion para el registo de usuarios nuevos
 $register.on('click', function() {
-  const correo = $email.val();
-  const password = $password.val();
+  const name = $name.val();
+  const apellido = $apellido.val();
+  const correo = $emailRegistro.val();
+  const password = $passwordRegistro.val();
   const registro = firebase.auth().createUserWithEmailAndPassword(correo, password)
 
     .catch(function(error) {
@@ -56,12 +68,51 @@ $login.on('click', function() {
       let errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
+      alert('Usuario o contraseña incorrectos');
+    });
+});
+
+// para configurar un observador de estado de autenticación y obtén datos del usuario
+let observador = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log('existe usuario activo');
+      // User is signed in.
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
+      console.log(user);
+      muro();
+    // ...
+    } else {
+      console.log('no existe usuario activo');
+    // User is signed out.
+    }
+  });
+};
+
+let muro = () => {
+  location.href = 'views/view1.html';
+};
+
+let $logout = $('#logout');
+$logout.on('click', function() {
+  firebase.auth().signOut()
+    .then(function functionName() {
+      console.log(' saliendo. ..');
+      location.href = 'index.html';
+    })
+    .catch(function(error) {
+      console.log(error);
     });
 });
 
 
-// Funcion para cerrar sesion
-$logout.on('click', function() {
+/* let cerrar = () => {
   firebase.auth().signOut()
     .then(function functionName() {
       console.log('saliendo...');
@@ -69,10 +120,19 @@ $logout.on('click', function() {
     .catch(function(error) {
       console.log(error);
     });
-});
+};*/
 
 // Funcion para guardar los datos del usuaio en Firebase
 const datosUsuario = (user) =>{
+  let usuario= {
+  uid:user.uid,  
+  nombre: user.displayName,
+  correo:user.email,
+  foto: user.photoURL
+  }
+  firebase.database().ref("Usuarios/" + user.uid)
+  .set(usuario)  
+}
   let usuario = {
     uid: user.uid,
     nombre: user.displayName,

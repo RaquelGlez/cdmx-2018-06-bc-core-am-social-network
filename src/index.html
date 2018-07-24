@@ -18,7 +18,7 @@
             <img class="form-logo" src="images/mi-sazon.png" alt="Mi-Sazón">
           </article>
           <section class="form-group">
-            <button id="register" type="button" class="btn btn-warning btn-block form-button">Registrarme</button>
+            <button id="on_register" type="button" class="btn btn-warning btn-block form-button" data-toggle="modal" data-target="#exampleModal">Registrate</button>
             <button id="loginGoogle" type="button" class="btn btn-danger btn-block form-button">Iniciar sesión con <i class="fab fa-google-plus-square"></i></button>
             <button id="loginFacebook" type="button" class="btn btn-primary btn-block form-button">Iniciar sesión con <i class="fab fa-facebook-square"></i></button>
             <label class="form-label" for="email">Correo electrónico</label>
@@ -34,6 +34,45 @@
       </article>
     </section>
   </main>
+  
+  
+  <section class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal-dialog" role="document">
+          <section class="modal-content">
+            <section class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registro de nuevo usuario</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </section>
+            <section class="modal-body">
+              <section class="form-group">
+                <label for="name">Nombre</label>
+                <input id="name" placeholder="Ingresa tu Nombre" class="form-control"  type="text" />
+              </section>
+              <section class="form-group">
+                <label for="last_name">Apellido</label>
+                <input id="last_name" placeholder="Ingresa tu Apellido" class="form-control"  type="text" />
+              </section>
+              <section class="form-group">
+                <label for="email">Email</label>
+                <input id="email2" placeholder="Ingresa tu email" class="form-control"  type="text" />
+              </section>
+              <section class="form-group">
+                <label for="password">Password</label>
+                <input id="password2" placeholder="Ingresa tu contraseña" class="form-control"  type="password" />
+              </section>
+            </section>
+            <section class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+              <button id="register" onclick="registrar()" type="button" class="btn btn-primary">GUARDAR</button>
+            </section>
+          </section>
+        </section>
+      </section>
+  
+  
+
   <script src ="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
@@ -52,7 +91,7 @@
   </script>
   <script  src = " https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
   <script  src = " https://www.gstatic.com/firebasejs/ui/3.1.1/firebase-ui-auth__es.js "></script>
-
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/index.js" ></script>
 </body>
