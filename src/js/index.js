@@ -25,7 +25,7 @@ $('#loginFacebook').click(function() {
 let $email = $('#email');
 let $password = $('#password');
 let $register = $('#register');
-let $logout = $('#logout');
+// let $logout = $('#logout');
 let $login = $('#login');
 
 // funcion para el registo de usuarios nuevos
@@ -54,12 +54,51 @@ $login.on('click', function() {
       let errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
+      alert('Usuario o contraseña incorrectos');
     });
 });
 
+// para configurar un observador de estado de autenticación y obtén datos del usuario
+let observador = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log('existe usuario activo');
+      muro();
+      // User is signed in.
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
+      console.log(user);
+    // ...
+    } else {
+      console.log('no existe usuario activo');
+    // User is signed out.
+    }
+  });
+};
+observador();
 
-// Funcion para cerrar sesion
+let muro = () => {
+  location.assign('views/view1.html');
+};
+
+let $logout = $('#logout');
 $logout.on('click', function() {
+  firebase.auth().signOut()
+    .then(function functionName() {
+      console.log(' saliendo. ..');
+      location.assign('index.html');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+});
+
+/* let cerrar = () => {
   firebase.auth().signOut()
     .then(function functionName() {
       console.log('saliendo...');
@@ -67,4 +106,4 @@ $logout.on('click', function() {
     .catch(function(error) {
       console.log(error);
     });
-});
+};*/
