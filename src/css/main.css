@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=Fugaz+One'); */
 
 @media (min-width: 768px) {
   .contenedor {
@@ -8,24 +8,34 @@
     margin: 0 auto;
     margin-top: 1em;
   }
+  .form-label {
+    font-size: 1.5em !important;
+  }
+  .form-button {
+    font-size: 2em !important;
+    color: white;
+  }
+  .form-input {
+    font-size: 1.5em;
+  }
 }
 
 body {
   background-image: url(../images/fondo.png);
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Fugaz One', cursive;
 }
 
 .form-button {
-  font-size: 2em;
+  font-size: 1em;
   color: white;
 }
 
 .form-label {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .form-input {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .contenedor, #contenedor {
