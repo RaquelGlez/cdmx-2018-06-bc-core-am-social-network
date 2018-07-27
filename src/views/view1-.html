@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Mi Sazón</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="images/mi-sazon.ico">
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="../css/view1.css" />
 </head>
 <body>
@@ -41,29 +41,44 @@
             <div class="card-body">
               <form action="">
                 <div class="form-group">
-                  <input id="publicText"type="text" class="form-control" placeholder="¿Qué tienes en tu refri?"/>
+                  <input type="text" class="form-control" placeholder="¿Qué tienes en tu refri?"/>
                 </div>
-                <button id="publicButton" type="button" class="btn btn-primary form-button">Publicar</button>
+                <button id="loginFacebook" type="button" class="btn btn-primary form-button">Publicar</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section>
       <div class="row">
         <div class="col-sm">
           <div class="card publication">
-           <!-- <img class="card-img-top" src="https://www.cocinavital.mx/wp-content/uploads/2017/08/hot-cakes-con-avena-y-amaranto-e1525899524738.jpg" alt="Card image cap"> -->
-            <div id="cardBody" class="card-body">
-             <!-- <h5 class="card-title">Hotcakes de Avena y Amaranto</h5> -->
-              <p id= "text" class="card-text"></p>
-              <!-- <a href="#" class="btn btn-primary">Ver mas...</a> -->
-              <a id="heart" class="a-like-btn" href="#"><i class="fas fa-heart like-btn"></i></a>
+            <img class="card-img-top" src="http://www.lacocinachilena.tk/wp-content/uploads/2017/12/chuletas-cerdo-salsa-naranja.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Chuleta con jugo de naranja</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Ver mas...</a>
+              <a class="a-like-btn" href="#"><i class="fas fa-heart like-btn"></i></a>
               <div class="text-right">
-                <a id="edit" class="btn btn-secondary form-button" href="#">Editar</a>
+                <a href="#">Editar</a>
                  |
-                <a id= "delet" class="btn btn-danger form-button" href="#">Borrar</a>
+                <a href="#">Compartir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card publication">
+            <img class="card-img-top" src="https://www.cocinavital.mx/wp-content/uploads/2017/08/hot-cakes-con-avena-y-amaranto-e1525899524738.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Hotcakes de Avena y Amaranto</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Ver mas...</a>
+              <a class="a-like-btn" href="#"><i class="fas fa-heart like-btn"></i></a>
+              <div class="text-right">
+                <a href="#">Editar</a>
+                <a href="#">Compartir</a>
               </div>
             </div>
           </div>
@@ -71,12 +86,32 @@
       </div>
     </div>
   </section>
-  <script  src = "https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+
+  <!-- <button id="logout" type="button" class="btn btn-primary btn-lg btn-color">CERRAR SESIÓN</button> -->
+
+  <script src ="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+  let config = {
+    apiKey: "AIzaSyBURBUsmSksVn1nbBWquIWIamJlXlXTaCQ",
+    authDomain: "diy-de-firebase.firebaseapp.com",
+    databaseURL: "https://diy-de-firebase.firebaseio.com",
+    projectId: "diy-de-firebase",
+    storageBucket: "diy-de-firebase.appspot.com",
+    messagingSenderId: "184356921265"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script  src = " https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
+  <script  src = " https://www.gstatic.com/firebasejs/ui/3.1.1/firebase-ui-auth__es.js "></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <!-- <script src="js/index.js" ></script> -->
-  <script src="../js/view1.js"></script>
+
+  <script src="js/index.js" ></script>
 </body>
 </html>
