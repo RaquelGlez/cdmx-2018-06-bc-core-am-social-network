@@ -1,37 +1,42 @@
+let config = {
+  apiKey: 'AIzaSyBURBUsmSksVn1nbBWquIWIamJlXlXTaCQ',
+  authDomain: 'diy-de-firebase.firebaseapp.com',
+  databaseURL: 'https://diy-de-firebase.firebaseio.com',
+  projectId: 'diy-de-firebase',
+  storageBucket: 'diy-de-firebase.appspot.com',
+  messagingSenderId: '184356921265'
+};
+firebase.initializeApp(config);
 
-//  variables de jQuery
-let $name = $('#name');
-let $apellido = $('#last_name');
-let $emailRegistro = $('#email_register');
-let $passwordRegistro = $('#password_register');
-let $register = $('#register');
-let $emailLogin = $('#email');
-let $passwordLogin = $('#password');
-let $login = $('#login');
-// let $logout = $('#logout');
-
+// Elementos del DOM
+let name = document.getElementById('name');
+let apellido = document.getElementById('last_name');
+let emailRegistro = document.getElementById('email_register');
+let passwordRegistro = document.getElementById('password_register');
+let register = document.getElementById('register');
+let emailLogin = document.getElementById('emailLogin');
+let passwordLogin = document.getElementById('password');
+let login = document.getElementById('login');
 
 // funcion para el registo de usuarios nuevos
-$register.on('click', function() {
-  // const $fullName = $name.val() + ' ' + $apellido.val();
-  const $fullName = `${$name.val()} ${$apellido.val()}`;
-  // const prueba = $fullName;
-  // const $name = $name.val();
-  // const $apellido = $apellido.val();
-  console.log($fullName);
-  const $correo = $emailRegistro.val();
-  const $password = $passwordRegistro.val();
-  console.log($correo);
-  console.log($password);
+register.addEventListener('click', registerFunction = () => {
+  // const fullName = name.value + ' ' + apellido.value;
+  const fullName = `${name.value} ${apellido.value}`;
+  console.log(fullName);
+  const correo = emailRegistro.value;
+  const password = passwordRegistro.value;
+  console.log(correo);
+  console.log(password);
   const auth = firebase.auth();
-  const registro = auth.createUserWithEmailAndPassword($correo, $password);
+  const registro = auth.createUserWithEmailAndPassword(correo, password);
   registro.then((user) => {
-    console.log(user);
+    // console.log(user);
     const newUser = auth.currentUser;
     const parametro = newUser.updateProfile({
-      displayName: $fullName,
-      email: $correo
+      displayName: fullName,
+      email: correo
     });
+    datosUsuario1(newUser);
   })
     .catch(function(error) {
       // Mensaje en consola si existe error de registro
@@ -40,18 +45,12 @@ $register.on('click', function() {
       console.log(errorCode);
       console.log(errorMessage);
     });
-
-  /* const registro = firebase.auth().createUserWithEmailAndPassword($correo, $password)
-    .then().catch(function(error) {
-      // Mensaje en consola si existe error de registro
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-    });*/
+  observador();
 });
 
 const datosUsuario1 = (user) =>{
+  let newUser = user;
+  console.log(newUser.displayName);
   let database = firebase.database();
   let usuario = {
     uid: user.uid,
@@ -59,19 +58,18 @@ const datosUsuario1 = (user) =>{
     correo: user.email,
     foto: user.photoURL
   };
-  database.ref('Usuarios/' + user.uid)
-    .set(usuario);
+  console.log(usuario);
+  database.ref('Usuarios/' /* + user.uid*/)
+    .push(usuario);
 };
 
-
 // funcion para iniciar sesion con correo y contrasena ya registrados
-$login.on('click', function() {
-  const $email = $emailLogin.val();
-  const $password = $passwordLogin.val();
-  console.log($email);
-  console.log($password);
-
-  const inicio = firebase.auth().signInWithEmailAndPassword($email, $password)
+login.addEventListener('click', loginfunction = () => {
+  const email = emailLogin.value;
+  const password = passwordLogin.value;
+  console.log(email);
+  console.log(password);
+  const inicio = firebase.auth().signInWithEmailAndPassword(email, password)
     .catch(function(error) {
     // Mensaje en consola si existe error de inicio de sesion
       let errorCode = error.code;
@@ -83,38 +81,36 @@ $login.on('click', function() {
   observador();
 });
 
+let loginGoogle = document.getElementById('loginGoogle');
 
 // funcion para iniciar sesioon con Google
 let providerg = new firebase.auth.GoogleAuthProvider();
-$('#loginGoogle').click(function() {
+loginGoogle.addEventListener('click', providerGoogle = () => {
   firebase.auth()
     .signInWithPopup(providerg)
     .then(function(result) {
       console.log(result.user);
       datosUsuario(result.user);
-      // $('#loginGoogle').hide();
     });
-observador();
+  observador();
 });
 
-
+let loginFacebook = document.getElementById('loginFacebook');
 // funcion para iniciar sesion con facebook
 let providerf = new firebase.auth.FacebookAuthProvider();
-$('#loginFacebook').click(function() {
+loginFacebook.addEventListener('click', providerFacebook = () => {
   firebase.auth()
     .signInWithPopup(providerf)
     .then(function(result) {
       console.log(result.user);
       datosUsuario(result.user);
-      // $('#loginFacebook').hide();
     });
   observador();
 });
 
-
 // para configurar un observador de estado de autenticación y obtén datos del usuario
 let observador = () => {
-  firebase.auth().onAuthStateChanged(function(user) {
+  firebase.auth().onAuthStateChanged(whatcher = (user) => {
     if (user) {
       console.log('existe usuario activo');
       // User is signed in.
@@ -125,7 +121,6 @@ let observador = () => {
       let isAnonymous = user.isAnonymous;
       let uid = user.uid;
       let providerData = user.providerData;
-      console.log(user);
       muro();
     } else {
       console.log('no existe usuario activo');
@@ -133,7 +128,7 @@ let observador = () => {
     }
   });
 };
-observador();
+// observador();
 
 let muro = () => {
   location.href = 'views/view1.html';
