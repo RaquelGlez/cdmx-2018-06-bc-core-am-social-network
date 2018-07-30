@@ -1,13 +1,3 @@
-let config = {
-  apiKey: 'AIzaSyBURBUsmSksVn1nbBWquIWIamJlXlXTaCQ',
-  authDomain: 'diy-de-firebase.firebaseapp.com',
-  databaseURL: 'https://diy-de-firebase.firebaseio.com',
-  projectId: 'diy-de-firebase',
-  storageBucket: 'diy-de-firebase.appspot.com',
-  messagingSenderId: '184356921265'
-};
-firebase.initializeApp(config);
-
 // Elementos del DOM
 let name = document.getElementById('name');
 let apellido = document.getElementById('last_name');
@@ -15,7 +5,7 @@ let emailRegistro = document.getElementById('email_register');
 let passwordRegistro = document.getElementById('password_register');
 let register = document.getElementById('register');
 let emailLogin = document.getElementById('emailLogin');
-let passwordLogin = document.getElementById('password');
+let passwordLogin = document.getElementById('passwordLogin');
 let login = document.getElementById('login');
 
 // funcion para el registo de usuarios nuevos
@@ -30,22 +20,25 @@ register.addEventListener('click', registerFunction = () => {
   const auth = firebase.auth();
   const registro = auth.createUserWithEmailAndPassword(correo, password);
   registro.then((user) => {
-    // console.log(user);
+    console.log(auth.currentUser);
     const newUser = auth.currentUser;
-    const parametro = newUser.updateProfile({
+    newUser.updateProfile({
       displayName: fullName,
       email: correo
-    });
-    datosUsuario1(newUser);
-  })
-    .catch(function(error) {
+    }).then(() => {
+      console.log(newUser);
+      datosUsuario1(newUser);
+      alert('Te has registrado correctamente.  Inicia sesión con tu correo y contraseña');
+    })
+      .catch(function(error) {
       // Mensaje en consola si existe error de registro
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-    });
-  observador();
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+    // observador();
+  });
 });
 
 const datosUsuario1 = (user) =>{
@@ -56,11 +49,11 @@ const datosUsuario1 = (user) =>{
     uid: user.uid,
     nombre: user.displayName,
     correo: user.email,
-    foto: user.photoURL
+    foto: user.photoURL || 'https://sss.ukzn.ac.za/wp-content/uploads/2017/12/profile-placeholder.png',
   };
   console.log(usuario);
-  database.ref('Usuarios/' /* + user.uid*/)
-    .push(usuario);
+  database.ref('Usuarios/' + user.uid)
+    .set(usuario);
 };
 
 // funcion para iniciar sesion con correo y contrasena ya registrados
@@ -82,7 +75,6 @@ login.addEventListener('click', loginfunction = () => {
 });
 
 let loginGoogle = document.getElementById('loginGoogle');
-
 // funcion para iniciar sesioon con Google
 let providerg = new firebase.auth.GoogleAuthProvider();
 loginGoogle.addEventListener('click', providerGoogle = () => {
@@ -94,6 +86,7 @@ loginGoogle.addEventListener('click', providerGoogle = () => {
     });
   observador();
 });
+
 
 let loginFacebook = document.getElementById('loginFacebook');
 // funcion para iniciar sesion con facebook
@@ -107,6 +100,7 @@ loginFacebook.addEventListener('click', providerFacebook = () => {
     });
   observador();
 });
+
 
 // para configurar un observador de estado de autenticación y obtén datos del usuario
 let observador = () => {

@@ -16,53 +16,38 @@ let heart = document.getElementById('heart');
 let edit = document.getElementById('edit');
 let delet = document.getElementById('delet');
 
-let refPub;
+// let refPub;
+// función para mostrar el perfin del usuario
+const segundaPruebapParaUsuario = () => {
+  firebase.auth().onAuthStateChanged( checkStatusUser = (user) => {
+    if (user) {
+      let pruebaName = user.displayName;
+      let pruebaEmail = user.email;
+      let pruebaPhoto = user.photoURL || 'https://sss.ukzn.ac.za/wp-content/uploads/2017/12/profile-placeholder.png';
+      pName.textContent = pruebaName;
+      pEmail.textContent = pruebaEmail;
+      pPhoto.style.background = 'url('+pruebaPhoto+')'
+    };
+  });
+};
 
+// funcion para guardar el post en la base de datos
 const getPost = () => {
   publicButton.addEventListener('click', saveData = () =>{
     const currentUser = firebase.auth().currentUser;
     const textPost = textInput.value;
     const newMessageKey = firebase.database().ref().child('Mensajes').push().key;
     firebase.database().ref(`Mensajes/${newMessageKey}`).set({
-      user:currentUser.uid,
+      user: currentUser.uid,
       userName: currentUser.displayName,
-      post:textPost
+      post: textPost
     });
   });
 };
 
 
-//
-// // funcion para detonar el evento de generar la publicacion
-// const init = () => {
-//   publicButton.addEventListener('click', sendPublicationFirebase);
-//   refPub = firebase.database().ref().child('Publicaciones');
-// };
-//
-// // funcion para crear el elemento del Mensaje
-// /*const createNewPubElement = (pubString) => {
-//
-// }*/
-//
-// // funcion para enviar las publicaciones a firebase
-// const sendPublicationFirebase = () => {
-//   console.log(refPub);
-//   refPub.push({
-//     mensaje: textInput.value
-//   })
-// }
-
-
-
-/*comentarioUsuario = () => {
-  publicButton.addEventListener('click', publicacion = () => {
-    let databaseComen = firebase.database();
-    let usuarioMen = {
-      mensaje: textInput.value
-    };
-    databaseComen.ref('Publicaciones')
-      .push(usuarioMen);
-  });
-};*/
-
- window.onload = getPost;
+window.onload = function() {
+  getPost();
+  segundaPruebapParaUsuario();
+};
+// window.onload = getPost;
