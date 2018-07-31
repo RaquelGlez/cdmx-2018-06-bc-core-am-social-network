@@ -184,14 +184,12 @@ conexión a Internet.
 
 ### Benchmarking de las principales redes sociales:
 
-Presentamos las conclusiones del benchmark realizado:
-
+Presentamos las conclusiones del benchmark realizado
 
 ![Benchamark1](./src/images/benchmark1.png)
 
+Research:
 
-
-Research
 Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de las recetas por internet.
 
 # Aquí la liga de la encuesta realizada a los usuarios:
@@ -199,12 +197,17 @@ Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de 
 [ _ENCUESTA_ ](https://docs.google.com/forms/d/1QtJxC6FTiAEgu0vUFdwEPrbeYzB89d7BoPzQCruXHvI/edit)
 
 De los resultados obtenidos hasta el momento podríamos decir que:
+
     • Los usuarios buscan recetas por internet, pero no son usuarios de una red
     social específica
+
     • De acuerdo con la respuestas recibidas no son usuarios de las redes sociales
      que se han considerado en el benchmark
+
     • Consumen las recetas de redes sociales más genéricas como youtube, pinterest
+
     • Coinciden en que no encuentran recetas saludables
+
     • coinciden en que no encuentran recetas con ingredientes fáciles de conseguir
      o que tienen disponibles
 
@@ -238,7 +241,7 @@ al funcionamiento del producto solicitado, como se muestra a continuación:
 ![Sketch1](./src/images/sketch1.jpg)
 
 
-# Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual (Figma), como se puede apreciar a continuación:
+# Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual Figma, como se puede apreciar a continuación:
 
  ![Image Login 1](./src/images/login1.png)
 
@@ -253,7 +256,7 @@ al funcionamiento del producto solicitado, como se muestra a continuación:
 
 
 # Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual
- (Figma), como se puede apreciar a continuación:
+Figma, como se puede apreciar a continuación:
 
  ![Image Login 2](./src/images/login2.png)
 
