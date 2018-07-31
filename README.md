@@ -230,23 +230,23 @@ El sketch a lapiz y papel, se realizó pensando en mobile-first, se implemento u
 
  De los resultados obtenidos hasta el momento podríamos decir que:
 
-     • Los usuarios utilizan con mayor frecuencia Instagram como red social predominante.
+     * Los usuarios utilizan con mayor frecuencia Instagram como red social predominante.
 
      ![Gráfica 1](./src/images/grafica1.png)
 
-     • Las públicaciones que mas buscan los usuarios se encuantran en Instagram, según la encuesta.
+     * Las públicaciones que mas buscan los usuarios se encuantran en Instagram, según la encuesta.
 
      ![Gráfica 2](./src/images/grafica2.png)
 
-     • Publican mas en Instagram que en Facebook, Pinterest, Twitter y Whatsapp.
+     * Publican mas en Instagram que en Facebook, Pinterest, Twitter y Whatsapp.
 
      ![Gráfica 3](./src/images/grafica3.png)
 
-     • Coinciden en que en Instagram se encuantran más rápido los resultados de búsquedas.
+     * Coinciden en que en Instagram se encuantran más rápido los resultados de búsquedas.
 
      ![Gráfica 4](./src/images/grafica4.png)
 
-     • Coinciden en que el uso que los usuarios encuestados le dan a las redes sociales es mas que todo interacción con amigos y familiares sobre temas diversos.
+     * Coinciden en que el uso que los usuarios encuestados le dan a las redes sociales es mas que todo interacción con amigos y familiares sobre temas diversos.
 
      ![Gráfica 5](./src/images/grafica5.png)
 
