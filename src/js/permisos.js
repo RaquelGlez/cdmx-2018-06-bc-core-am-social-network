@@ -7,6 +7,6 @@ const credentials = () => {
       storageBucket: 'diy-de-firebase.appspot.com',
       messagingSenderId: '184356921265'
     };
-    firebase.initializeApp(config);        
+    firebase.initializeApp(config);
 }
 window.onload = credentials();
