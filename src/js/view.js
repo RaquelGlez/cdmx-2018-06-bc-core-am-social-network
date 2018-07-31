@@ -23,7 +23,7 @@ const getPost = () => {
     const userActive = firebase.auth().currentUser;
     const textPost = textInput.value;
     if (textPost == '') {
-      alert('No ingresaste nada😥, mejor compartenos que tienes en tu refri y presiona Enviar 👍');
+      alert('No ingresaste nada😥, compartenos que tienes en tu refri y presiona Publicar 👍');
     } else {
       const newMessageKey = firebase.database().ref().child('Mensajes').push().key;
     let update = {
