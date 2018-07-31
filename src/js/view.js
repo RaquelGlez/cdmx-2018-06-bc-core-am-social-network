@@ -47,7 +47,7 @@ const getProfileUser = () => {
       let pruebaPhoto = user.photoURL || 'https://sss.ukzn.ac.za/wp-content/uploads/2017/12/profile-placeholder.png';
       pName.textContent = pruebaName;
       pEmail.textContent = pruebaEmail;
-      pPhoto.style.background = 'url('+pruebaPhoto+')'
+      pPhoto.style.background = 'url(' + pruebaPhoto + ')';
     };
   });
 
@@ -81,7 +81,7 @@ userExit.addEventListener('click', showExit = () => {
 });
 
 
-window.onload = function () {
+window.onload = function() {
   getPost();
   getProfileUser();
   // pruebaDeNombre();
