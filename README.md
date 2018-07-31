@@ -76,6 +76,16 @@ Intercambio de recetas de comida, entre comunidad interesada en recetas fáciles
 ### Proto-Usuario:
 Raquel es una mujer de 25 años que vive con su familia (esposo e hijo) en la ciudad de México. Ella trabaja en una empresa de servicios en un horario de 9 a 6 pm y percibe un ingreso promedio (8 000). Una de sus necesidades es procurar para su familia una alimentación saludable y equilibrada dentro de sus posibilidades económicas. Raquel gusta de buscar recetas de comida en internet que parecen fáciles y tienen pocos ingredientes. Sin embargo, los resultados de su búsqueda siempre concluyen  en recetarios online de comida que no permiten una retroalimentación con la comunidad, de tal forma que se puedan intercambiar versiones. Por tanto las redes sociales enfocadas al intercambio de recetas son muy escasas en el mercado, y se espera con la implementación de esta, crear un espacio, en donde la comunidad en general pueda ser capaz de acceder a recetas locales, que no requieran tanto tiempo de preparación o una gran inversión en los ingredientes.
 
+###  Historias de Usuarios:
+
+* Yo, como usuaria que quiere registrarse en esta red social quiero poder loguearme con mi correo para empezar a usar esta red.
+
+* Yo, como usuaria que quiere registrarse en esta red social, quiero poder loguearme con mi cuenta facebook o google para empezar a usar esta red.
+
+* Yo como usuaria de una red social de intercambio de recetas, quiero poder encontrar recetas de preparación rápida.
+
+* Yo como usuaria de una red social de intercambio de recetas, quiero poder interactuar con los demás usuarios de esta red para compartirnos recetas fáciles, rápidas y nutritivas.
+
 ### Alcances esperados por la red social:
 Con la creación de la red social, esperamos no ser un repositorio de recetas de
 cocina, es decir, esperamos crear un espacio en donde los usuarios puedan encontrar,
@@ -115,11 +125,13 @@ Plataforma en la que los propios usuarios los que suben las fotos de los platos 
 
 ### Benchmarking de las principales redes sociales:
 
-Presentamos las conclusiones del benchmark realizado:
+Presentamos los resultados de los benchmark realizados:
 
 ![Benchamark1](./src/images/benchmark1.png)
 
-### Research:
+![Benchamark2](./src/images/benchmark2.png)
+
+### Research 1:
 
 Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de las recetas por internet.
 
@@ -207,6 +219,36 @@ El sketch a lapiz y papel, se realizó pensando en mobile-first, se implemento u
 
 
 ![Image Muro 2](./src/images/mobilesecondscreen.png)
+
+### Research 2:
+
+ Se realizó una encuesta, para conocer las preferencias de los usuarios en el uso de redes sociales y de como interactuan con dichas plataformas.
+
+### Aquí la liga de la encuesta realizada a los usuarios:
+
+ <i class="fas fa-arrow-alt-circle-right"></i>[ _ENCUESTA_ ](https://docs.google.com/forms/d/11Tn-SqXwQnFSE09q6OoEf-5wrBZcRpbN23JTNXTRT6I/edit?ts=5b58acb3)
+
+ De los resultados obtenidos hasta el momento podríamos decir que:
+
+     • Los usuarios utilizan con mayor frecuencia Instagram como red social predominante.
+
+     ![Gráfica 1](./src/images/grafica1.png)
+
+     • Las públicaciones que mas buscan los usuarios se encuantran en Instagram, según la encuesta.
+
+     ![Gráfica 2](./src/images/grafica2.png)
+
+     • Publican mas en Instagram que en Facebook, Pinterest, Twitter y Whatsapp.
+
+     ![Gráfica 3](./src/images/grafica3.png)
+
+     • Coinciden en que en Instagram se encuantran más rápido los resultados de búsquedas.
+
+     ![Gráfica 4](./src/images/grafica4.png)
+
+     • Coinciden en que el uso que los usuarios encuestados le dan a las redes sociales es mas que todo interacción con amigos y familiares sobre temas diversos.
+
+     ![Gráfica 5](./src/images/grafica5.png)
 
 
 ### Tests
