@@ -115,6 +115,7 @@ let observador = () => {
       let isAnonymous = user.isAnonymous;
       let uid = user.uid;
       let providerData = user.providerData;
+      console.log(user);
       muro();
     } else {
       console.log('no existe usuario activo');
