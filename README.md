@@ -188,11 +188,8 @@ Presentamos las conclusiones del benchmark realizado
 
 
 
-Entrevistas con usuarios
-Me tomé el atrevimiento de lanzar una pequeña encuesta sobre la búsqueda y uso de
-las recetas por internet, para tener un poco mas de idea sobre el terreno donde
-estamos paradas y que se puede ofrecer a personas normales, que viven inmersos
-en la rutina del día a día.
+Research
+Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de las recetas por internet.
 
 # Aquí la liga de la encuesta realizada a los usuarios:
 

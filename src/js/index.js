@@ -80,7 +80,7 @@ $login.on('click', function() {
       console.log(errorMessage);
       alert('Usuario o contraseña incorrectos');
     });
-  // observador();
+  observador();
 });
 
 
@@ -94,7 +94,7 @@ $('#loginGoogle').click(function() {
       datosUsuario(result.user);
       // $('#loginGoogle').hide();
     });
-// observador();
+  observador();
 });
 
 
@@ -108,7 +108,7 @@ $('#loginFacebook').click(function() {
       datosUsuario(result.user);
       // $('#loginFacebook').hide();
     });
-  // observador();
+  observador();
 });
 
 
@@ -126,7 +126,7 @@ let observador = () => {
       let uid = user.uid;
       let providerData = user.providerData;
       console.log(user);
-      // muro();
+      muro();
     } else {
       console.log('no existe usuario activo');
     // User is signed out.
