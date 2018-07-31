@@ -65,35 +65,16 @@ sketches(bocetos) compártelos.
 
 ### Responsive
 
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te
-sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica
-al final).
+Debe verse bien en dispositivos de pantallas grandes (computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica al final).
 
 ### Objetivos
-Diseñar y construir una red social en la cual contega un log-in, con el que se
-pueda accesar a la plataforma, que sea fácil de manipular, amigable al usuario,
-además de que se pueda utilizar en distintos dispositivos: moviles, tablets y
-desktops.
+Diseñar y construir una red social en la cual contega un log-in, con el que se pueda accesar a la plataforma, que sea fácil de manipular, amigable al usuario, además de que se pueda utilizar en distintos dispositivos: moviles, tablets y desktops.
 
 ### Enfoque:
-Intercambio de recetas de comida, entre comunidad interesada en recetas fáciles,
-económicas, populares, y nutritivas.
+Intercambio de recetas de comida, entre comunidad interesada en recetas fáciles, económicas, populares, y nutritivas.
 
 ### Proto-Usuario:
-Raquel es una mujer de 25 años que vive con su familia (esposo e hijo) en la
-ciudad de México. Ella trabaja en una empresa de servicios en un horario de
-9 a 6 pm y percibe un ingreso promedio (8 000). Una de sus necesidades es
-procurar para su familia una alimentación saludable y equilibrada dentro de sus
-posibilidades económicas. Raquel gusta de buscar recetas de comida en internet
-que parecen fáciles y tienen pocos ingredientes. Sin embargo, los resultados de
-su búsqueda siempre concluyen  en recetarios online de comida que no permiten
-una retroalimentación con la comunidad, de tal forma que se puedan intercambiar
-versiones. Por tanto las redes sociales enfocadas al intercambio de recetas
-son muy escasas en el mercado, y se espera con la implementación de esta, crear
-un espacio, en donde la comunidad en general pueda ser capaz de acceder a
-recetas locales, que no requieran tanto tiempo de preparación o una gran
-inversión en los ingredientes.
+Raquel es una mujer de 25 años que vive con su familia (esposo e hijo) en la ciudad de México. Ella trabaja en una empresa de servicios en un horario de 9 a 6 pm y percibe un ingreso promedio (8 000). Una de sus necesidades es procurar para su familia una alimentación saludable y equilibrada dentro de sus posibilidades económicas. Raquel gusta de buscar recetas de comida en internet que parecen fáciles y tienen pocos ingredientes. Sin embargo, los resultados de su búsqueda siempre concluyen  en recetarios online de comida que no permiten una retroalimentación con la comunidad, de tal forma que se puedan intercambiar versiones. Por tanto las redes sociales enfocadas al intercambio de recetas son muy escasas en el mercado, y se espera con la implementación de esta, crear un espacio, en donde la comunidad en general pueda ser capaz de acceder a recetas locales, que no requieran tanto tiempo de preparación o una gran inversión en los ingredientes.
 
 ### Alcances esperados por la red social:
 Con la creación de la red social, esperamos no ser un repositorio de recetas de
@@ -114,81 +95,31 @@ así como los recetarios y blogs en línea son muy populares, de hecho en la act
 existen aplicaciones móviles que te permiten aprender recetas previamente sugeridas,
 algunas aplicaciones son:
 
-#Nestlè Cocina:
+* Nestlè Cocina:
 
 ![Nestle](./src/images/nestle.jpg)
 
-Un manual de cocina en formato app para iOS y Android. Para acceder a cada plato
-es posible utilizar un buscador y después afinar los resultados con distintos
-filtros o bien emplear los submenús disponibles, como Recetas vegetarianas,
-Recetas sin gluten, Tipo de alimento, Recetas familiares u Ocasiones especiales,
-entre otros.
-Una vez que seleccionamos la receta, en su ficha encontramos textos con información
-nutricional por ración (hidratos, grasas, proteínas…), los ingredientes,las indicaciones
-para la preparación y consejos adicionales. Pero, además, la mayoría de ellas lleva
-asociado el enlace a un vídeo del canal de YouTube de Nestlé Cocina para seguir
-el paso a paso de la elaboración.
-Para los que no tienen claro qué cocinar, esta aplicación ofrece dos funciones:
-La primera de ellas es “Mi nevera”, un submenú en el que el usuario introduce
-ingredientes y a cambio obtiene sugerencias de los platos que puede elaborar con
-ellos. Y, por otro lado, con la opción “Cena Planner”, la app recomienda una cena
-complementaria a la comida que se ha hecho ese mismo día.
-Uno de sus puntos a favor, sobre todo para los más recelosos de su intimidad, es
-que puede utilizarse sin registro, aunque también se ofrece la creación de un
-“usuario único” que da acceso a todas las webs de Nestlé y con el que se puede
-participar en sorteos y promociones, para lo cual hay que proporcionar NIF,
-fecha de nacimiento y un correo electrónico. De igual modo, este registro es
-necesario para marcar como favoritas las recetas de la app con el fin de guardarlas
- y que el usuario pueda crear sus propias listas.
+Un manual de cocina en formato app para iOS y Android. Para acceder a cada plato es posible utilizar un buscador y después afinar los resultados con distintos filtros o bien emplear los submenús disponibles, como Recetas vegetarianas, Recetas sin gluten, Tipo de alimento, Recetas familiares u Ocasiones especiales, entre otros. Una vez que seleccionamos la receta, en su ficha encontramos textos con información nutricional por ración (hidratos, grasas, proteínas…), los ingredientes,las indicaciones para la preparación y consejos adicionales. Pero, además, la mayoría de ellas lleva asociado el enlace a un vídeo del canal de YouTube de Nestlé Cocina para seguir el paso a paso de la elaboración. Para los que no tienen claro qué cocinar, esta aplicación ofrece dos funciones: La primera de ellas es “Mi nevera”, un submenú en el que el usuario introduce ingredientes y a cambio obtiene sugerencias de los platos que puede elaborar con ellos. Y, por otro lado, con la opción “Cena Planner”, la app recomienda una cena complementaria a la comida que se ha hecho ese mismo día. Uno de sus puntos a favor, sobre todo para los más recelosos de su intimidad, es que puede utilizarse sin registro, aunque también se ofrece la creación de un “usuario único” que da acceso a todas las webs de Nestlé y con el que se puede participar en sorteos y promociones, para lo cual hay que proporcionar NIF, fecha de nacimiento y un correo electrónico. De igual modo, este registro es necesario para marcar como favoritas las recetas de la app con el fin de guardarlas y que el usuario pueda crear sus propias listas.
 
-#PetitChef:
+* PetitChef:
 
 ![Peti chef](./src/images/petichef.png)
 
-Engloba más de 20.000 recetas que pueden filtrarse por tres tipos distintos:
-Entrante, Plato principal y Postre. Pero para aquellos que no quieran darle muchas
-vueltas a la cabeza, nada más entrar en la app se ofrece el menú del día, configurado
-por una propuesta de cada una de esas categorías. Si esa sugerencia no es suficiente,
-es posible ir hacia atrás y consultar los menús de días anteriores.
-Una vez seleccionada una receta concreta, al acceder a su ficha encontramos
-información con los ingredientes y el paso a paso de su preparación. Todo ello a
-través de explicaciones muy sencillas que, en ocasiones, se acompañan de fotos
-detalladas y vídeos, así como de opiniones aportadas por los usuarios, lo cual
-otorga una capa social a PetitChef.
-Sin embargo, uno de sus puntos negativos es que muestra demasiada publicidad mientras
-se navega por sus distintas funciones.
-Al igual que la anterior, PetitChef puede utilizarse sin necesidad de registro,
-aunque si el usuario quiere guardar recetas para crear su lista de favoritos debe
-crearse una cuenta y proporcionar un correo electrónico. Está disponible para
-dispositivos iOS y Android.
+Engloba más de 20.000 recetas que pueden filtrarse por tres tipos distintos: Entrante, Plato principal y Postre. Pero para aquellos que no quieran darle muchas vueltas a la cabeza, nada más entrar en la app se ofrece el menú del día, configurado por una propuesta de cada una de esas categorías. Si esa sugerencia no es suficiente, es posible ir hacia atrás y consultar los menús de días anteriores. Una vez seleccionada una receta concreta, al acceder a su ficha encontramos información con los ingredientes y el paso a paso de su preparación. Todo ello a través de explicaciones muy sencillas que, en ocasiones, se acompañan de fotos detalladas y vídeos, así como de opiniones aportadas por los usuarios, lo cual otorga una capa social a PetitChef. Sin embargo, uno de sus puntos negativos es que muestra demasiada publicidad mientras se navega por sus distintas funciones. Al igual que la anterior, PetitChef puede utilizarse sin necesidad de registro, aunque si el usuario quiere guardar recetas para crear su lista de favoritos debe crearse una cuenta y proporcionar un correo electrónico. Está disponible para dispositivos iOS y Android.
 
-#Cookpad:
+* Cookpad:
 
 ![Cookpad](./src/images/cookpad.jpg)
 
-Plataforma en la que los propios usuarios los que suben las fotos de los platos
-que han elaborado, sus ingredientes y los pasos para su elaboración. Funciona como
-cualquier red social, de tal modo que en primer lugar es necesario formalizar un
-registro (a través de Facebook, Google+ o un correo electrónico) y a partir de ahí
-comienza a configurarse el muro donde queda reflejada la actividad del usuario y
-la de aquellos a los que sigue.
-Según sus responsables, se han publicado ya cerca de 200.000 recetas y en cada
-una de ellas se plantean dudas o se aportan consejos a aquellos que las han compartido,
-pero además es posible establecer conversaciones privadas dentro de la app gracias a
-un chat que funciona como cualquier aplicación de mensajería instantánea.
-Cuenta con versiones gratuitas para iOS y Android, pero también con una edición
-Premium para ambos sistemas operativos por 2,99 euros mensuales que entre otras
-ventajas facilita la búsqueda de un plato concreto a través de la reorganización
-de los resultados y permite descargar recetas para consultarlas posteriormente sin
-conexión a Internet.
+Plataforma en la que los propios usuarios los que suben las fotos de los platos que han elaborado, sus ingredientes y los pasos para su elaboración. Funciona como cualquier red social, de tal modo que en primer lugar es necesario formalizar un registro (a través de Facebook, Google+ o un correo electrónico) y a partir de ahí comienza a configurarse el muro donde queda reflejada la actividad del usuario y la de aquellos a los que sigue. Según sus responsables, se han publicado ya cerca de 200.000 recetas y en cada una de ellas se plantean dudas o se aportan consejos a aquellos que las han compartido, pero además es posible establecer conversaciones privadas dentro de la app gracias a un chat que funciona como cualquier aplicación de mensajería instantánea. Cuenta con versiones gratuitas para iOS y Android, pero también con una edición Premium para ambos sistemas operativos por 2,99 euros mensuales que entre otras ventajas facilita la búsqueda de un plato concreto a través de la reorganización de los resultados y permite descargar recetas para consultarlas posteriormente sin conexión a Internet.
 
 ### Benchmarking de las principales redes sociales:
 
-Presentamos las conclusiones del benchmark realizado
+Presentamos las conclusiones del benchmark realizado:
 
 ![Benchamark1](./src/images/benchmark1.png)
 
-Research:
+### Research:
 
 Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de las recetas por internet.
 
@@ -219,10 +150,7 @@ De los resultados obtenidos hasta el momento podríamos decir que:
 
 ![Resultado 3](./src/images/result3.png)
 
-Una vez que se definieron las nececidades de nuestro producto comenzamos con un
-User Flow, para ayudarnos  a comprender el comportamiento  y asi poder materializar
-frente al cliente las interacciones de los usuarios con sus productos, llegando asi
-al funcionamiento del producto solicitado, como se muestra a continuación:
+Una vez que se definieron las nececidades de nuestro producto comenzamos con un User Flow, para ayudarnos  a comprender el comportamiento  y asi poder materializar frente al cliente las interacciones de los usuarios con sus productos, llegando asi al funcionamiento del producto solicitado, como se muestra a continuación:
 
 ![User Flow](./src/images/userflowMiSazon.png)
 
@@ -255,8 +183,7 @@ al funcionamiento del producto solicitado, como se muestra a continuación:
 ![Sketch Login 3](./src/images/sketchlogin3.jpg)
 
 
-# Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual
-Figma, como se puede apreciar a continuación:
+# Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual Figma, como se puede apreciar a continuación:
 
  ![Image Login 2](./src/images/login2.png)
 
