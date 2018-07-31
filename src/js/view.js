@@ -29,14 +29,15 @@ const getPost = () => {
       post:textPost
     }
     firebase.database().ref(`Mensajes/${newMessageKey}`).set(update);
+    document.getElementById('publicText').value = '';
   });
-};
+  };
 
-/* const pruebaDeNombre = () => {
+  const pruebaDeNombre = (user) => {
   const checkUser = firebase.auth().currentUser;
   welcomeUser = checkUser.displayName;
-  logedUser.innerHTML = "Hola" + " " + welcomeUser + "comparte tu receta";
-} */
+  logedUser.innerHTML = "Hola" + " " + welcomeUser;
+} 
 // Sirve pero da undefind para el nombre del usuario// logedUser.innerHTML = "Hola" + " " + welcomeUser + " " + "comparte tu receta";
 
 const getProfileUser = () => {
@@ -49,6 +50,7 @@ const getProfileUser = () => {
       pEmail.textContent = pruebaEmail;
       pPhoto.style.background = 'url('+pruebaPhoto+')'
     }
+    pruebaDeNombre();
   })
 
   firebase.database().ref('Mensajes')
