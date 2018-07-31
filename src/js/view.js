@@ -22,14 +22,18 @@ const getPost = () => {
   publicButton.addEventListener('click', saveData = () =>{
     const userActive = firebase.auth().currentUser;
     const textPost = textInput.value;
-    const newMessageKey = firebase.database().ref().child('Mensajes').push().key;
+    if (textPost == '') {
+      alert('No ingresaste nada😥, mejor compartenos que tienes en tu refri y presiona Enviar 👍');
+    } else {
+      const newMessageKey = firebase.database().ref().child('Mensajes').push().key;
     let update = {
       user:userActive.uid,
       userName:userActive.displayName,
       post:textPost
     }
     firebase.database().ref(`Mensajes/${newMessageKey}`).set(update);
-    document.getElementById('publicText').value = '';
+    document.getElementById('publicText').value = '';      
+    }    
   });
   };
 
