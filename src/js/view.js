@@ -1,68 +1,88 @@
-let config = {
-  apiKey: 'AIzaSyBURBUsmSksVn1nbBWquIWIamJlXlXTaCQ',
-  authDomain: 'diy-de-firebase.firebaseapp.com',
-  databaseURL: 'https://diy-de-firebase.firebaseio.com',
-  projectId: 'diy-de-firebase',
-  storageBucket: 'diy-de-firebase.appspot.com',
-  messagingSenderId: '184356921265'
-};
-firebase.initializeApp(config);
-
-
-let textInput = document.getElementById('publicText'); // input de publicacion
-let publicButton = document.getElementById('publicButton'); // boton de publicacion
-let cardBody = document.getElementById('cardBody'); // caja de la publicacion
-let heart = document.getElementById('heart');
-let edit = document.getElementById('edit');
-let delet = document.getElementById('delet');
-
-let refPub;
+ // Variables del DOM vista1
+ let textInput = document.getElementById('publicText'); // input de publicacion
+ let publicButton = document.getElementById('publicButton'); // boton de publicacion
+ let cardPublication = document.getElementById('cardPublication'); // caja de la publicacion
+ let heart = document.getElementById('heart');
+ let edit = document.getElementById('edit');
+ let delet = document.getElementById('delet');
+ 
+ // Variables para Usuario
+ let logedUser = document.getElementById('logedUser');
+ let userProfile = document.getElementById('userProfile');
+ let userHome = document.getElementById('userHome');
+ let userExit = document.getElementById('userExit');
+ let pPhoto = document.getElementById('pPhoto');
+ let pName= document.getElementById('pName');
+ let pEmail = document.getElementById('pEmail');
+ 
+ // Variables globales 
+ let welcomeUser;
 
 const getPost = () => {
   publicButton.addEventListener('click', saveData = () =>{
-    const currentUser = firebase.auth().currentUser;
+    const userActive = firebase.auth().currentUser;
     const textPost = textInput.value;
     const newMessageKey = firebase.database().ref().child('Mensajes').push().key;
-    firebase.database().ref(`Mensajes/${newMessageKey}`).set({
-      user:currentUser.uid,
-      userName: currentUser.displayName,
+    let update = {
+      user:userActive.uid,
+      userName:userActive.displayName,
       post:textPost
-    });
+    }
+    firebase.database().ref(`Mensajes/${newMessageKey}`).set(update);
   });
 };
 
+/* const pruebaDeNombre = () => {
+  const checkUser = firebase.auth().currentUser;
+  welcomeUser = checkUser.displayName;
+  logedUser.innerHTML = "Hola" + " " + welcomeUser + "comparte tu receta";
+} */
+// Sirve pero da undefind para el nombre del usuario// logedUser.innerHTML = "Hola" + " " + welcomeUser + " " + "comparte tu receta";
 
-//
-// // funcion para detonar el evento de generar la publicacion
-// const init = () => {
-//   publicButton.addEventListener('click', sendPublicationFirebase);
-//   refPub = firebase.database().ref().child('Publicaciones');
-// };
-//
-// // funcion para crear el elemento del Mensaje
-// /*const createNewPubElement = (pubString) => {
-//
-// }*/
-//
-// // funcion para enviar las publicaciones a firebase
-// const sendPublicationFirebase = () => {
-//   console.log(refPub);
-//   refPub.push({
-//     mensaje: textInput.value
-//   })
-// }
+const getProfileUser = () => {
+  firebase.auth().onAuthStateChanged( checkStatusUser = (user) => {
+    if (user){
+      let pruebaName = user.displayName;
+      let pruebaEmail = user.email;
+      let pruebaPhoto = user.photoURL  || 'https://sss.ukzn.ac.za/wp-content/uploads/2017/12/profile-placeholder.png';
+      pName.textContent = pruebaName;
+      pEmail.textContent = pruebaEmail;
+      pPhoto.style.background = 'url('+pruebaPhoto+')'
+    }
+  })
+
+  firebase.database().ref('Mensajes')
+  .on('child_added', (newMessage)=>{
+    cardPublication.innerHTML += 
+    `<div id="cardPublication" class="card publication">
+      <div  class="card-body">
+        <p>${newMessage.val().userName}</p>
+        <p>${newMessage.val().post}</p>
+        <div class="text-right">
+          <a id="heart" class="a-like-btn" href="#"><i class="fas fa-heart like-btn"></i></a>
+          <a id="edit" class="btn btn-secondary form-button" href="#">Editar</a>
+          <a id= "delet" class="btn btn-danger form-button" href="#">Borrar</a>
+        </div>
+      </div> 
+    </div>`
+})
+
+}
+/* userProfile.addEventListener('click', showUser = () => {
+  alert('Aquí irá el modal');
+}) */
+
+ userHome.addEventListener('click', showHome = () => {
+  location.href = '../views/view1.html';
+}) 
+
+userExit.addEventListener('click', showExit = () => {
+  location.href = '../index.html';
+}) 
 
 
-
-/*comentarioUsuario = () => {
-  publicButton.addEventListener('click', publicacion = () => {
-    let databaseComen = firebase.database();
-    let usuarioMen = {
-      mensaje: textInput.value
-    };
-    databaseComen.ref('Publicaciones')
-      .push(usuarioMen);
-  });
-};*/
-
- window.onload = getPost;
+window.onload = function () {
+  getPost();
+  getProfileUser();
+  //pruebaDeNombre();
+}
