@@ -137,7 +137,7 @@ Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de 
 
 # Aquí la liga de la encuesta realizada a los usuarios:
 
-<i class="fas fa-arrow-alt-circle-right"></i>[ _ENCUESTA_ ](https://docs.google.com/forms/d/1QtJxC6FTiAEgu0vUFdwEPrbeYzB89d7BoPzQCruXHvI/edit)
+[ _ENCUESTA_ ](https://docs.google.com/forms/d/1QtJxC6FTiAEgu0vUFdwEPrbeYzB89d7BoPzQCruXHvI/edit)
 
 De los resultados obtenidos hasta el momento podríamos decir que:
 
@@ -226,7 +226,7 @@ El sketch a lapiz y papel, se realizó pensando en mobile-first, se implemento u
 
 ### Aquí la liga de la encuesta realizada a los usuarios:
 
- <i class="fas fa-arrow-alt-circle-right"></i>[ _ENCUESTA_ ](https://docs.google.com/forms/d/11Tn-SqXwQnFSE09q6OoEf-5wrBZcRpbN23JTNXTRT6I/edit?ts=5b58acb3)
+ [ _ENCUESTA_ ](https://docs.google.com/forms/d/11Tn-SqXwQnFSE09q6OoEf-5wrBZcRpbN23JTNXTRT6I/edit?ts=5b58acb3)
 
  De los resultados obtenidos hasta el momento podríamos decir que:
 
