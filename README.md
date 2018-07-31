@@ -184,7 +184,10 @@ conexión a Internet.
 
 ### Benchmarking de las principales redes sociales:
 
-Presentamos las conclusiones del benchmark realizado
+Presentamos las conclusiones del benchmark realizado:
+
+
+![Benchamark1](./src/images/benchmark1.png)
 
 
 
