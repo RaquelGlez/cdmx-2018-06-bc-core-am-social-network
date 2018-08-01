@@ -4,6 +4,11 @@ let publicButton = document.getElementById('publicButton'); // boton de publicac
 let cardPublication = document.getElementById('cardPublication'); // caja de la publicacion
 let photoButton = document.getElementById('photoButton');
  
+let heart = document.getElementById('heart');
+let edit = document.getElementById('edit');
+let delet = document.getElementById('delet');
+let profileImage = document.getElementById('profile-image');
+
 // Variables para Usuario
 let logedUser = document.getElementById('logedUser');
 let userProfile = document.getElementById('userProfile');
@@ -12,6 +17,7 @@ let userExit = document.getElementById('userExit');
 let pPhoto = document.getElementById('pPhoto');
 let pName = document.getElementById('pName');
 let pEmail = document.getElementById('pEmail');
+
 let profileImage = document.getElementById('profile-image');
 
 //  //Variables para Post
@@ -20,14 +26,19 @@ let profileImage = document.getElementById('profile-image');
  
  
 // Variables globales 
+
+// Variables globales
 let welcomeUser;
 
 const getPost = () => {
   publicButton.addEventListener('click', saveData = () =>{
     const userActive = firebase.auth().currentUser;
     const textPost = textInput.value;
+
     if (textPost == '') {
       alert('No ingresaste nada😥, compartenos que tienes en tu refri y presiona Publicar 👍');
+    if (textPost === '') {
+      alert('No ingresaste nada 😥, mejor compartenos que tienes en tu refri y presiona Enviar 👍');
     } else {
       const newMessageKey = firebase.database().ref().child('Mensajes').push().key;
       let update = {
@@ -36,6 +47,7 @@ const getPost = () => {
         post: textPost
       };
       firebase.database().ref(`Mensajes/${newMessageKey}`).set(update);
+
       document.getElementById('publicText').value = '';      
     }    
   });
@@ -46,6 +58,18 @@ const welcomeUserPost = (user) => {
   welcomeUser = checkUser.displayName;
   logedUser.innerHTML = 'Hola' + ' ' + welcomeUser;
 }; 
+  
+      document.getElementById('publicText').value = '';
+    }
+  });
+};
+
+const pruebaDeNombre = (user) => {
+  const checkUser = firebase.auth().currentUser;
+  welcomeUser = checkUser.displayName;
+  logedUser.innerHTML = 'Hola' + ' ' + welcomeUser;
+};
+// Sirve pero da undefind para el nombre del usuario// logedUser.innerHTML = "Hola" + " " + welcomeUser + " " + "comparte tu receta";
 
 const getProfileUser = () => {
   firebase.auth().onAuthStateChanged(checkStatusUser = (user) => {
@@ -56,13 +80,23 @@ const getProfileUser = () => {
       pName.textContent = pruebaName;
       pEmail.textContent = pruebaEmail;
       profileImage.setAttribute('src', pruebaPhoto + '?type=large');
+
     }
     welcomeUserPost();
+
+      // pPhoto.style.background = 'url(' + pruebaPhoto + ')';
+    }
+    pruebaDeNombre();
+
   });
 
   firebase.database().ref('Mensajes')
     .on('child_added', (newMessage)=>{
+
       cardPublication.innerHTML += 
+
+      cardPublication.innerHTML +=
+
     `<div id="cardPublication" class="card publication">
       <div  class="card-body">
         <p>${newMessage.val().userName}</p>
@@ -83,6 +117,17 @@ const getProfileUser = () => {
 userHome.addEventListener('click', showHome = () => {
   location.href = '../views/view1.html';
 }); 
+      </div>
+    </div>`;
+    });
+};
+/* userProfile.addEventListener('click', showUser = () => {
+  alert('Aquí irá el modal');
+}) */
+
+userHome.addEventListener('click', showHome = () => {
+  location.href = '../views/view1.html';
+});
 
 userExit.addEventListener('click', showExit = () => {
   firebase.auth().signOut()
@@ -94,8 +139,12 @@ userExit.addEventListener('click', showExit = () => {
   location.href = '../index.html';
 }); 
 
+});
+
 
 window.onload = function() {
   getPost();
   getProfileUser();  
+  getProfileUser();
+  // pruebaDeNombre();
 };
