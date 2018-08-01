@@ -67,9 +67,7 @@ const getProfileUser = () => {
       <div  class="card-body">
         <p>${newMessage.val().userName}</p>
         <p>${newMessage.val().post}</p>
-        <div class="text-right">
-          <a class="btn btn-secondary form-button edit" onclick="editPost">Editar</a>
-          <a class="btn btn-danger form-button delet" onclick="deletPost">Borrar</a>
+        <div class="text-right">          
         </div>
       </div> 
     </div>`;
