@@ -5,6 +5,7 @@ let cardPublication = document.getElementById('cardPublication'); // caja de la 
 let heart = document.getElementById('heart');
 let edit = document.getElementById('edit');
 let delet = document.getElementById('delet');
+let profileImage = document.getElementById('profile-image');
 
 // Variables para Usuario
 let logedUser = document.getElementById('logedUser');
@@ -52,7 +53,7 @@ const getProfileUser = () => {
       let pruebaPhoto = user.photoURL || 'https://sss.ukzn.ac.za/wp-content/uploads/2017/12/profile-placeholder.png';
       pName.textContent = pruebaName;
       pEmail.textContent = pruebaEmail;
-      pPhoto.style.background = 'url(' + pruebaPhoto + ')';
+      profileImage.setAttribute('src', pruebaPhoto + '?type=large');
     }
     pruebaDeNombre();
   });
