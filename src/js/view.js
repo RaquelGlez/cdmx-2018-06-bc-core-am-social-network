@@ -2,6 +2,8 @@
 let textInput = document.getElementById('publicText'); // input de publicacion
 let publicButton = document.getElementById('publicButton'); // boton de publicacion
 let cardPublication = document.getElementById('cardPublication'); // caja de la publicacion
+let photoButton = document.getElementById('photoButton');
+ 
 let heart = document.getElementById('heart');
 let edit = document.getElementById('edit');
 let delet = document.getElementById('delet');
@@ -16,6 +18,15 @@ let pPhoto = document.getElementById('pPhoto');
 let pName = document.getElementById('pName');
 let pEmail = document.getElementById('pEmail');
 
+let profileImage = document.getElementById('profile-image');
+
+//  //Variables para Post
+//  let edit = document.getElementById('edit');
+//  let delet = document.getElementById('delet');
+ 
+ 
+// Variables globales 
+
 // Variables globales
 let welcomeUser;
 
@@ -23,6 +34,9 @@ const getPost = () => {
   publicButton.addEventListener('click', saveData = () =>{
     const userActive = firebase.auth().currentUser;
     const textPost = textInput.value;
+
+    if (textPost == '') {
+      alert('No ingresaste nada😥, compartenos que tienes en tu refri y presiona Publicar 👍');
     if (textPost === '') {
       alert('No ingresaste nada 😥, mejor compartenos que tienes en tu refri y presiona Enviar 👍');
     } else {
@@ -33,6 +47,18 @@ const getPost = () => {
         post: textPost
       };
       firebase.database().ref(`Mensajes/${newMessageKey}`).set(update);
+
+      document.getElementById('publicText').value = '';      
+    }    
+  });
+};
+
+const welcomeUserPost = (user) => {
+  const checkUser = firebase.auth().currentUser;
+  welcomeUser = checkUser.displayName;
+  logedUser.innerHTML = 'Hola' + ' ' + welcomeUser;
+}; 
+  
       document.getElementById('publicText').value = '';
     }
   });
@@ -54,23 +80,43 @@ const getProfileUser = () => {
       pName.textContent = pruebaName;
       pEmail.textContent = pruebaEmail;
       profileImage.setAttribute('src', pruebaPhoto + '?type=large');
+
+    }
+    welcomeUserPost();
+
       // pPhoto.style.background = 'url(' + pruebaPhoto + ')';
     }
     pruebaDeNombre();
+
   });
 
   firebase.database().ref('Mensajes')
     .on('child_added', (newMessage)=>{
+
+      cardPublication.innerHTML += 
+
       cardPublication.innerHTML +=
+
     `<div id="cardPublication" class="card publication">
       <div  class="card-body">
         <p>${newMessage.val().userName}</p>
         <p>${newMessage.val().post}</p>
-        <div class="text-right">
-          <a id="heart" class="a-like-btn" href="#"><i class="fas fa-heart like-btn"></i></a>
-          <a id="edit" class="btn btn-secondary form-button" href="#">Editar</a>
-          <a id= "delet" class="btn btn-danger form-button" href="#">Borrar</a>
+        <div class="text-right">          
         </div>
+      </div> 
+    </div>`;
+    });
+//  //Variables para Post
+//  let edit = document.getElementsByClassName('edit');
+//  let delet = document.getElementsByClassName('delet');
+// delet.addEventListener('click', event =>{
+//   alert();
+// })
+};
+
+userHome.addEventListener('click', showHome = () => {
+  location.href = '../views/view1.html';
+}); 
       </div>
     </div>`;
     });
@@ -84,12 +130,21 @@ userHome.addEventListener('click', showHome = () => {
 });
 
 userExit.addEventListener('click', showExit = () => {
+  firebase.auth().signOut()
+    .then(function() {
+      console.log('Saliendo...');  
+    }).catch(function(error) {
+      console.log('error');    
+    });
   location.href = '../index.html';
+}); 
+
 });
 
 
 window.onload = function() {
   getPost();
+  getProfileUser();  
   getProfileUser();
   // pruebaDeNombre();
 };
