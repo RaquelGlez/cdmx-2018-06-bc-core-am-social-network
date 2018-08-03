@@ -18,7 +18,6 @@
             <img class="form-logo" src="images/mi-sazon.png" alt="Mi-Sazón">
           </article>
           <section class="form-group">
-            <button id="on_register" type="button" class="btn btn-warning btn-block form-button" data-toggle="modal" data-target="#exampleModal">Registrate</button>
             <button id="loginGoogle" type="button" class="btn btn-danger btn-block form-button">Iniciar sesión con <i class="fab fa-google-plus-square"></i></button>
             <button id="loginFacebook" type="button" class="btn btn-primary btn-block form-button">Iniciar sesión con <i class="fab fa-facebook-square"></i></button>
             <label class="form-label" for="email">Correo electrónico</label>
@@ -29,11 +28,11 @@
             <input type="password" class="form-control form-input" id="passwordLogin" />
           </section>
           <button id="login" type="button" class="btn btn-success btn-block form-button">Iniciar sesión</button>
+          <button id="on_register" type="button" class="btn btn-warning btn-block form-button" data-toggle="modal" data-target="#exampleModal">Registrate</button>
         </form>
       </article>
     </section>
   </main>
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -64,20 +63,19 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button id="register" type="button" class="btn btn-primary" data-dismiss="modal">Registrar</button>
+          <button id="register" type="button" class="btn btn-primary">Registrar</button>
         </div>
       </div>
     </div>
   </div>
-
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script  src = "https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-  <script  src = "https://www.gstatic.com/firebasejs/ui/3.1.1/firebase-ui-auth__es.js"></script>
+  <script  src = " https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
+  <script  src = " https://www.gstatic.com/firebasejs/ui/3.1.1/firebase-ui-auth__es.js "></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
   <script src="js/permisos.js"></script>
   <script src="js/index.js" ></script>
-  <script src="js/view.js"></script>
+  <!-- <script src="js/view.js"></script> -->
 </body>
 </html>

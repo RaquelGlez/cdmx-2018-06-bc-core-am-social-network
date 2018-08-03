@@ -12,21 +12,21 @@ let login = document.getElementById('login');
 register.addEventListener('click', registerFunction = () => {
   // const fullName = name.value + ' ' + apellido.value;
   const fullName = `${name.value} ${apellido.value}`;
-  console.log(fullName);
+  // console.log(fullName);
   const correo = emailRegistro.value;
   const password = passwordRegistro.value;
-  console.log(correo);
-  console.log(password);
+  // console.log(correo);
+  // console.log(password);
   const auth = firebase.auth();
   const registro = auth.createUserWithEmailAndPassword(correo, password);
   registro.then((user) => {
-    console.log(auth.currentUser);
+    // console.log(auth.currentUser);
     const newUser = auth.currentUser;
     newUser.updateProfile({
       displayName: fullName,
       email: correo
     }).then(() => {
-      console.log(newUser);
+      // console.log(newUser);
       datosUsuario1(newUser);
       alert('Te has registrado correctamente.  Inicia sesión con tu correo y contraseña');
     })
@@ -43,7 +43,7 @@ register.addEventListener('click', registerFunction = () => {
 
 const datosUsuario1 = (user) =>{
   let newUser = user;
-  console.log(newUser.displayName);
+  // console.log(newUser.displayName);
   let database = firebase.database();
   let usuario = {
     uid: user.uid,
