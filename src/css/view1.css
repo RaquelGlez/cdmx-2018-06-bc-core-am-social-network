@@ -1,9 +1,13 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans'); 
 
 body {
   font-family:'Quattrocento Sans', sans-serif;
   font-size: 1em;
+}
+
+.publication {
+  margin-top: 1em;
 }
 
 .navbar-style {
@@ -24,4 +28,16 @@ nav div ul li a{
 nav a {
   display: block;
   margin: 0 auto !important;
+}
+
+.a-like-btn {
+  border-radius: 7px;
+  font-size: 1em;
+  padding: 0.6em;
+  border: 1px solid gray;
+}
+
+.like-btn {
+  color: red;
+  font-size: 1em;
 }

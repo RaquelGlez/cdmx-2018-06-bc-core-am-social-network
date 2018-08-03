@@ -1,5 +1,6 @@
 const credentials = () => {
   let config = {
+
     apiKey: 'AIzaSyBURBUsmSksVn1nbBWquIWIamJlXlXTaCQ',
     authDomain: 'diy-de-firebase.firebaseapp.com',
     databaseURL: 'https://diy-de-firebase.firebaseio.com',
