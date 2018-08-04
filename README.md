@@ -65,35 +65,26 @@ sketches(bocetos) compártelos.
 
 ### Responsive
 
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te
-sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica
-al final).
+Debe verse bien en dispositivos de pantallas grandes (computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica al final).
 
 ### Objetivos
-Diseñar y construir una red social en la cual contega un log-in, con el que se
-pueda accesar a la plataforma, que sea fácil de manipular, amigable al usuario,
-además de que se pueda utilizar en distintos dispositivos: moviles, tablets y
-desktops.
+Diseñar y construir una red social en la cual contega un log-in, con el que se pueda accesar a la plataforma, que sea fácil de manipular, amigable al usuario, además de que se pueda utilizar en distintos dispositivos: moviles, tablets y desktops.
 
 ### Enfoque:
-Intercambio de recetas de comida, entre comunidad interesada en recetas fáciles,
-económicas, populares, y nutritivas.
+Intercambio de recetas de comida, entre comunidad interesada en recetas fáciles, económicas, populares, y nutritivas.
 
 ### Proto-Usuario:
-Raquel es una mujer de 25 años que vive con su familia (esposo e hijo) en la
-ciudad de México. Ella trabaja en una empresa de servicios en un horario de
-9 a 6 pm y percibe un ingreso promedio (8 000). Una de sus necesidades es
-procurar para su familia una alimentación saludable y equilibrada dentro de sus
-posibilidades económicas. Raquel gusta de buscar recetas de comida en internet
-que parecen fáciles y tienen pocos ingredientes. Sin embargo, los resultados de
-su búsqueda siempre concluyen  en recetarios online de comida que no permiten
-una retroalimentación con la comunidad, de tal forma que se puedan intercambiar
-versiones. Por tanto las redes sociales enfocadas al intercambio de recetas
-son muy escasas en el mercado, y se espera con la implementación de esta, crear
-un espacio, en donde la comunidad en general pueda ser capaz de acceder a
-recetas locales, que no requieran tanto tiempo de preparación o una gran
-inversión en los ingredientes.
+Raquel es una mujer de 25 años que vive con su familia (esposo e hijo) en la ciudad de México. Ella trabaja en una empresa de servicios en un horario de 9 a 6 pm y percibe un ingreso promedio (8 000). Una de sus necesidades es procurar para su familia una alimentación saludable y equilibrada dentro de sus posibilidades económicas. Raquel gusta de buscar recetas de comida en internet que parecen fáciles y tienen pocos ingredientes. Sin embargo, los resultados de su búsqueda siempre concluyen  en recetarios online de comida que no permiten una retroalimentación con la comunidad, de tal forma que se puedan intercambiar versiones. Por tanto las redes sociales enfocadas al intercambio de recetas son muy escasas en el mercado, y se espera con la implementación de esta, crear un espacio, en donde la comunidad en general pueda ser capaz de acceder a recetas locales, que no requieran tanto tiempo de preparación o una gran inversión en los ingredientes.
+
+###  Historias de Usuarios:
+
+* Yo, como usuaria que quiere registrarse en esta red social quiero poder loguearme con mi correo para empezar a usar esta red.
+
+* Yo, como usuaria que quiere registrarse en esta red social, quiero poder loguearme con mi cuenta facebook o google para empezar a usar esta red.
+
+* Yo como usuaria de una red social de intercambio de recetas, quiero poder encontrar recetas de preparación rápida.
+
+* Yo como usuaria de una red social de intercambio de recetas, quiero poder interactuar con los demás usuarios de esta red para compartirnos recetas fáciles, rápidas y nutritivas.
 
 ### Alcances esperados por la red social:
 Con la creación de la red social, esperamos no ser un repositorio de recetas de
@@ -114,97 +105,56 @@ así como los recetarios y blogs en línea son muy populares, de hecho en la act
 existen aplicaciones móviles que te permiten aprender recetas previamente sugeridas,
 algunas aplicaciones son:
 
-#Nestlè Cocina:
+* Nestlè Cocina:
 
 ![Nestle](./src/images/nestle.jpg)
 
-Un manual de cocina en formato app para iOS y Android. Para acceder a cada plato
-es posible utilizar un buscador y después afinar los resultados con distintos
-filtros o bien emplear los submenús disponibles, como Recetas vegetarianas,
-Recetas sin gluten, Tipo de alimento, Recetas familiares u Ocasiones especiales,
-entre otros.
-Una vez que seleccionamos la receta, en su ficha encontramos textos con información
-nutricional por ración (hidratos, grasas, proteínas…), los ingredientes,las indicaciones
-para la preparación y consejos adicionales. Pero, además, la mayoría de ellas lleva
-asociado el enlace a un vídeo del canal de YouTube de Nestlé Cocina para seguir
-el paso a paso de la elaboración.
-Para los que no tienen claro qué cocinar, esta aplicación ofrece dos funciones:
-La primera de ellas es “Mi nevera”, un submenú en el que el usuario introduce
-ingredientes y a cambio obtiene sugerencias de los platos que puede elaborar con
-ellos. Y, por otro lado, con la opción “Cena Planner”, la app recomienda una cena
-complementaria a la comida que se ha hecho ese mismo día.
-Uno de sus puntos a favor, sobre todo para los más recelosos de su intimidad, es
-que puede utilizarse sin registro, aunque también se ofrece la creación de un
-“usuario único” que da acceso a todas las webs de Nestlé y con el que se puede
-participar en sorteos y promociones, para lo cual hay que proporcionar NIF,
-fecha de nacimiento y un correo electrónico. De igual modo, este registro es
-necesario para marcar como favoritas las recetas de la app con el fin de guardarlas
- y que el usuario pueda crear sus propias listas.
+Un manual de cocina en formato app para iOS y Android. Para acceder a cada plato es posible utilizar un buscador y después afinar los resultados con distintos filtros o bien emplear los submenús disponibles, como Recetas vegetarianas, Recetas sin gluten, Tipo de alimento, Recetas familiares u Ocasiones especiales, entre otros. Una vez que seleccionamos la receta, en su ficha encontramos textos con información nutricional por ración (hidratos, grasas, proteínas…), los ingredientes,las indicaciones para la preparación y consejos adicionales. Pero, además, la mayoría de ellas lleva asociado el enlace a un vídeo del canal de YouTube de Nestlé Cocina para seguir el paso a paso de la elaboración. Para los que no tienen claro qué cocinar, esta aplicación ofrece dos funciones: La primera de ellas es “Mi nevera”, un submenú en el que el usuario introduce ingredientes y a cambio obtiene sugerencias de los platos que puede elaborar con ellos. Y, por otro lado, con la opción “Cena Planner”, la app recomienda una cena complementaria a la comida que se ha hecho ese mismo día. Uno de sus puntos a favor, sobre todo para los más recelosos de su intimidad, es que puede utilizarse sin registro, aunque también se ofrece la creación de un “usuario único” que da acceso a todas las webs de Nestlé y con el que se puede participar en sorteos y promociones, para lo cual hay que proporcionar NIF, fecha de nacimiento y un correo electrónico. De igual modo, este registro es necesario para marcar como favoritas las recetas de la app con el fin de guardarlas y que el usuario pueda crear sus propias listas.
 
-#PetitChef:
+* PetitChef:
 
 ![Peti chef](./src/images/petichef.png)
 
-Engloba más de 20.000 recetas que pueden filtrarse por tres tipos distintos:
-Entrante, Plato principal y Postre. Pero para aquellos que no quieran darle muchas
-vueltas a la cabeza, nada más entrar en la app se ofrece el menú del día, configurado
-por una propuesta de cada una de esas categorías. Si esa sugerencia no es suficiente,
-es posible ir hacia atrás y consultar los menús de días anteriores.
-Una vez seleccionada una receta concreta, al acceder a su ficha encontramos
-información con los ingredientes y el paso a paso de su preparación. Todo ello a
-través de explicaciones muy sencillas que, en ocasiones, se acompañan de fotos
-detalladas y vídeos, así como de opiniones aportadas por los usuarios, lo cual
-otorga una capa social a PetitChef.
-Sin embargo, uno de sus puntos negativos es que muestra demasiada publicidad mientras
-se navega por sus distintas funciones.
-Al igual que la anterior, PetitChef puede utilizarse sin necesidad de registro,
-aunque si el usuario quiere guardar recetas para crear su lista de favoritos debe
-crearse una cuenta y proporcionar un correo electrónico. Está disponible para
-dispositivos iOS y Android.
+Engloba más de 20.000 recetas que pueden filtrarse por tres tipos distintos: Entrante, Plato principal y Postre. Pero para aquellos que no quieran darle muchas vueltas a la cabeza, nada más entrar en la app se ofrece el menú del día, configurado por una propuesta de cada una de esas categorías. Si esa sugerencia no es suficiente, es posible ir hacia atrás y consultar los menús de días anteriores. Una vez seleccionada una receta concreta, al acceder a su ficha encontramos información con los ingredientes y el paso a paso de su preparación. Todo ello a través de explicaciones muy sencillas que, en ocasiones, se acompañan de fotos detalladas y vídeos, así como de opiniones aportadas por los usuarios, lo cual otorga una capa social a PetitChef. Sin embargo, uno de sus puntos negativos es que muestra demasiada publicidad mientras se navega por sus distintas funciones. Al igual que la anterior, PetitChef puede utilizarse sin necesidad de registro, aunque si el usuario quiere guardar recetas para crear su lista de favoritos debe crearse una cuenta y proporcionar un correo electrónico. Está disponible para dispositivos iOS y Android.
 
-#Cookpad:
+* Cookpad:
 
 ![Cookpad](./src/images/cookpad.jpg)
 
-Plataforma en la que los propios usuarios los que suben las fotos de los platos
-que han elaborado, sus ingredientes y los pasos para su elaboración. Funciona como
-cualquier red social, de tal modo que en primer lugar es necesario formalizar un
-registro (a través de Facebook, Google+ o un correo electrónico) y a partir de ahí
-comienza a configurarse el muro donde queda reflejada la actividad del usuario y
-la de aquellos a los que sigue.
-Según sus responsables, se han publicado ya cerca de 200.000 recetas y en cada
-una de ellas se plantean dudas o se aportan consejos a aquellos que las han compartido,
-pero además es posible establecer conversaciones privadas dentro de la app gracias a
-un chat que funciona como cualquier aplicación de mensajería instantánea.
-Cuenta con versiones gratuitas para iOS y Android, pero también con una edición
-Premium para ambos sistemas operativos por 2,99 euros mensuales que entre otras
-ventajas facilita la búsqueda de un plato concreto a través de la reorganización
-de los resultados y permite descargar recetas para consultarlas posteriormente sin
-conexión a Internet.
+Plataforma en la que los propios usuarios los que suben las fotos de los platos que han elaborado, sus ingredientes y los pasos para su elaboración. Funciona como cualquier red social, de tal modo que en primer lugar es necesario formalizar un registro (a través de Facebook, Google+ o un correo electrónico) y a partir de ahí comienza a configurarse el muro donde queda reflejada la actividad del usuario y la de aquellos a los que sigue. Según sus responsables, se han publicado ya cerca de 200.000 recetas y en cada una de ellas se plantean dudas o se aportan consejos a aquellos que las han compartido, pero además es posible establecer conversaciones privadas dentro de la app gracias a un chat que funciona como cualquier aplicación de mensajería instantánea. Cuenta con versiones gratuitas para iOS y Android, pero también con una edición Premium para ambos sistemas operativos por 2,99 euros mensuales que entre otras ventajas facilita la búsqueda de un plato concreto a través de la reorganización de los resultados y permite descargar recetas para consultarlas posteriormente sin conexión a Internet.
 
 ### Benchmarking de las principales redes sociales:
 
-Presentamos las conclusiones del benchmark realizado
+Presentamos los resultados de los benchmark realizados:
 
+![Benchamark1](./src/images/benchmark1.png)
 
+![Benchamark2](./src/images/benchmark2.png)
 
-Entrevistas con usuarios
-Me tomé el atrevimiento de lanzar una pequeña encuesta sobre la búsqueda y uso de
-las recetas por internet, para tener un poco mas de idea sobre el terreno donde
-estamos paradas y que se puede ofrecer a personas normales, que viven inmersos
-en la rutina del día a día.
+### Research 1:
+
+Se realizó una encuesta, para conocer un poco más sobre la búsqueda y uso de las recetas por internet.
+
+# Aquí la liga de la encuesta realizada a los usuarios:
+
+[ _ENCUESTA_ ](https://docs.google.com/forms/d/1QtJxC6FTiAEgu0vUFdwEPrbeYzB89d7BoPzQCruXHvI/edit)
 
 De los resultados obtenidos hasta el momento podríamos decir que:
+
     • Los usuarios buscan recetas por internet, pero no son usuarios de una red
     social específica
+
     • De acuerdo con la respuestas recibidas no son usuarios de las redes sociales
      que se han considerado en el benchmark
+
     • Consumen las recetas de redes sociales más genéricas como youtube, pinterest
+
     • Coinciden en que no encuentran recetas saludables
+
     • coinciden en que no encuentran recetas con ingredientes fáciles de conseguir
      o que tienen disponibles
 
-#Resultados de encuesta:
+### Resultados de encuesta:
 
 ![Resultado 1](./src/images/result1.png)
 
@@ -212,23 +162,98 @@ De los resultados obtenidos hasta el momento podríamos decir que:
 
 ![Resultado 3](./src/images/result3.png)
 
-Una vez que se definieron las nececidades de nuestro producto comenzamos con un
-User Flow, para ayudarnos  a comprender el comportamiento  y asi poder materializar
-frente al cliente las interacciones de los usuarios con sus productos, llegando asi
-al funcionamiento del producto solicitado, como se muestra a continuación:
+Una vez que se definieron las nececidades de nuestro producto comenzamos con un User Flow, para ayudarnos  a comprender el comportamiento  y asi poder materializar frente al cliente las interacciones de los usuarios con sus productos, llegando asi al funcionamiento del producto solicitado, como se muestra a continuación:
 
 ![User Flow](./src/images/userflowMiSazon.png)
 
-# Como siguiente paso se realizo un sketch a lapiz y papel donde se plasma a grandes
-rasgos la interfaz con los elementos que ayudaran con la interacción de la misma,
-el cuál se mostro a nuestro cliente para su aprovación.
 
-![Sketch1](./src/images/sketch1.jpeg)
+* Como siguiente paso se realizo un sketch a lapiz y papel donde se plasma a grandes rasgos la interfaz con los elementos que ayudaran con la interacción de la misma, el cuál se mostro a nuestro cliente para su aprovación.
 
-# Una vez hechos los cambios pertinentes se paso a diseñar la interfaz con ayuda
-de una herramienta de diseño visual (Figma), como se puede apreciar a continuación:
+![Sketch Login Básico](./src/images/sketchloginbasico.jpeg)
 
-![Image Figma1](./src/images/login1.png)
+* Una vez hechos los cambios pertinentes se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual (Figma), como se puede apreciar a continuación:
+
+![Image Login Básico](./src/images/loginbasico.png)
+
+
+* Luego de testear nuestro login, los usuarios nos comentaron que nuestro logo no era agradable a la vista, por este motivo se procedió a modificar el logo a lapiz y papel, viendose de esta manera:
+
+![Sketch1](./src/images/sketch1.jpg)
+
+
+* Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual Figma, como se puede apreciar a continuación:
+
+ ![Image Login 1](./src/images/login1.png)
+
+
+* El cliente pide que no solo pueda registrarse con usuario y contraseña, sino que también se pueda autenticar con Facebook o Google, por ende se elaboró como se vería el login con dichos requerimientos; primero a lapiz y papel:
+
+![Sketch Login 2](./src/images/sketchlogin2.jpg)
+
+
+
+![Sketch Login 3](./src/images/sketchlogin3.jpg)
+
+
+* Luego, se paso a diseñar la interfaz con ayuda de una herramienta de diseño visual Figma, como se puede apreciar a continuación:
+
+ ![Image Login 2](./src/images/login2.png)
+
+
+ ![Image Login 3](./src/images/login3.png)
+
+El sketch a lapiz y papel, se realizó pensando en mobile-first, se implemento un menú hamburguesa del lado superior derecho con su respectivo logo, al darle “click” en el menú se desplegará una lista donde se podrá apreciar el perfil de usuario con una foto del mismo y un opción que nos permita cerrar la sesión (log out) al volver a darle “click” al menú de hamburguesa, este se ocultará dandole paso a la primera pantalla de nuestro muro se podra observar una caja que te pregunta de manera muy explicita ¿Qué tienes en tu refri? , donde se podrá públicar lo que desees saber acerca de recetas de cocina. Luego se verán publicaciones de aquellas personas a las que agregaste a tu red social la cual va a contener posting de recetas, o sugerencias de las mismas. Se podrá editar, compartir y hasta darle like (con un corazón) al post que sea de su agrado. Luego de observar como se vería nuestra interfaz en lapiz y papel , y plasmando todos los requerimientos que se necesitaban se procedió a realizar a color  las interfaces con ayuda de Figma. Se buscó que nuestra interfaz  fuera los mas amigable posible , fácil de usar pero sobre todo fácil de entender para el usuario.
+
+* A continuación se mostrarán los sketches a lapiz y papel:
+
+ ![Sketch Muro 1](./src/images/sketchmuro1.jpg)
+
+
+
+ ![Sketch Muro 2](./src/images/sketchmuro2.jpg)
+
+
+* Finalinzando con la utilización de la herramienta (Figma):
+
+![Image Muro 1](./src/images/mobilefirstscreen.png)
+
+
+![Image Muro 2](./src/images/mobilesecondscreen.png)
+
+### Research 2:
+
+ Se realizó una encuesta, para conocer las preferencias de los usuarios en el uso de redes sociales y de como interactuan con dichas plataformas.
+
+### Aquí la liga de la encuesta realizada a los usuarios:
+
+ [ _ENCUESTA_ ](https://docs.google.com/forms/d/11Tn-SqXwQnFSE09q6OoEf-5wrBZcRpbN23JTNXTRT6I/edit?ts=5b58acb3)
+
+ De los resultados obtenidos hasta el momento podríamos decir que:
+
+ Los usuarios utilizan con mayor frecuencia Instagram como red social predominante.
+
+ ![Gráfica 1](./src/images/grafica1.png)
+
+
+ Las públicaciones que mas buscan los usuarios se encuantran en Instagram, según la encuesta.
+
+ ![Gráfica 2](./src/images/grafica2.png)
+
+
+ Publican mas en Instagram que en Facebook, Pinterest, Twitter y Whatsapp.
+
+ ![Gráfica 3](./src/images/grafica3.png)
+
+
+  Coinciden en que en Instagram se encuantran más rápido los resultados de búsquedas.
+
+ ![Gráfica 4](./src/images/grafica4.png)
+
+
+ Coinciden en que el uso que los usuarios encuestados le dan a las redes sociales es mas que todo interacción con amigos y familiares sobre temas diversos.
+
+![Gráfica 5](./src/images/grafica5.png)
+
 
 ### Tests
 
