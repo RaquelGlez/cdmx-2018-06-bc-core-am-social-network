@@ -10,4 +10,5 @@ const credentials = () => {
   };
   firebase.initializeApp(config);
 };
+
 window.onload = credentials();
